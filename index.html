@@ -3,47 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduce Myself</title>
-    <link rel = "icon" type = "image/png" href="images/a-man-is-coding.png">
+    <title>Responsive Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
-    <header>
-        <h1>Nguyen Ngoc Thien Phuc</h1>
-        <nav>
-            <p>Contact Info:
-                <a href = "https://github.com/nnthienphuc" title="Github Profile">Github</a> |
-                <a href = "https://www.instagram.com/nnthienphuc" title="Instagram Profile">Instagram</a> |
-                <a href = "mailto:nnthienphuc@gmail.com" title="Send email">Email</a>
-            </p>
+    <header class= "header">
+        <a href="#home" class="logo">Nguyen Ngoc 
+            <span>Thien Phuc</span>
+        </a>
+
+        <i class='bx bx-menu' id ="menu-icons"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+
         </nav>
     </header>
-    <main>
-        <div>
-            <h2>About me</h2>
-            <p>My full name is Nguyen Ngoc Thien Phuc. It is my pleasure to introduce a dedicated and ambitious individual currently pursuing a career in web development.Studying as a Web Developer Junior at the prestigious <a href = "https://ptithcm.edu.vn/" title = "PTITHCM Website">Posts and Telecommunications Institute of Technology (PTIT)</a>, this candidate is eager to embark on a professional journey and is seeking an opportunity to apply their skills and knowledge in a dynamic work environment.</p>
-            <div>
-                <p>Proud of the knowledge acquired in this major, this candidate boasts expertise across various domains within the field of web development. Their academic journey has equipped them with a robust understanding of fundamental concepts including:</p>
-                <ul>
-                    <li><figure>
-                        <img src = "images/DSA(Custom).jpg" alt = "Data Structures and Algorithms" title="DSA" style="width: 25%;">
-                        <figcaption>Fig1. Data Structures and Algorithms</figcaption>
-                    </figure></li>
-                    <li><figure>
-                        <img src = "images/DB(Custom).jpg" alt = "Database" title="DB" style="width: 25%;">
-                        <figcaption>Fig2. Database</figcaption>
-                    </figure></li>
-                    <li><figure>
-                        <img src = "images/OOP(Custom).jpg" alt = "Object Oriented Programming" title="OOP" style="width: 25%;">
-                        <figcaption>Fig3. Object Oriented Programming</figcaption>
-                    </figure></li>
-                    <li><figure>
-                        <img src = "images/DDB(Custom).jpg" alt = "Distributed Databases" title="DDB" style="width: 25%;">
-                        <figcaption>Fig4. Distributed Databases</figcaption>
-                    </figure></li>
-                </ul>
-                <p>Their passion for learning and staying updated with industry trends underscores their commitment to excellence in their craft.</p>
+
+    <section class = "home" id = "home">
+        <div class="home-content">
+            <h1>Hi, It's <span>Thien Phuc</span></h1>
+            <h3 class = "text-animation">I'm a <span></span</h3>
+            <p>Driven by a desire to enhance user experiences and solve real-world problems, I constantly strive to stay updated with the latest industry trends and advancements. I am adept at collaborating within multidisciplinary teams, effectively communicating technical concepts, and adapting to evolving project requirements. My analytical mindset, attention to detail, and commitment to delivering high-quality work enable me to excel in fast-paced environments.</p>
+
+            <div class="social-icons">
+                <a href = "#"><i class='bx bxl-linkedin'></i></a>
+                <a href = "#"><i class='bx bxl-github'></i></a>
+                <a href = "#"><i class='bx bxl-facebook-circle'></i></a>
+                <a href = "#"><i class='bx bxl-instagram'></i></a>
+            </div>
+
+            <div class="btn-group">
+                <a href = "#" class = "btn">Hire</a>
+                <a href = "#contact" class = "btn">Contact</a>
             </div>
         </div>
-    </main>
+
+            <div class="home-img">
+                <img src="images/chosen-img.png" alt ="" style="width: 70%;">
+            </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
