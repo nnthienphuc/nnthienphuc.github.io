@@ -24,23 +24,28 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-(function() {
-    emailjs.init("vvnB0T_Rg_x8ZpMae"); // Thay YOUR_USER_ID bằng user ID của bạn
-
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Ngăn form gửi đi một cách thông thường
-
-        // Lấy dữ liệu từ form
-        var formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
+function sendMail() {
+    (function() {
+        emailjs.init("vvnB0T_Rg_x8ZpMae"); // Thay YOUR_USER_ID bằng user ID của bạn
+    
+        var sender_name = document.getElementById('name').value;
+        var sender_email = document.getElementById('email').value;
+        var sender_phone = document.getElementById('phone').value;
+        var sender_subject = document.getElementById('subject').value;
+        var sender_message = document.getElementById('message').value;
+    
+        var fullFormData = {
+            sender_name: sender_name,
+            sender_email: sender_email,
+            sender_phone: sender_phone,
+            sender_subject: sender_subject,
+            sender_message: sender_message
         };
-
+    
         // Gửi email
-        emailjs.send('service_swg5f5e', 'template_l6r5a9r', formData)
+        var serviceID = "service_swg5f5e";
+        var templateID = "template_c71x6wk";
+        emailjs.send(serviceID, templateID, fullFormData)
             .then(function(response) {
                 console.log('Email sent successfully', response);
                 alert('Message sent successfully. Thank you!');
@@ -48,5 +53,5 @@ menuIcon.onclick = () => {
                 console.log('Email sending failed', error);
                 alert('Oops! Something went wrong. Please try again later.');
             });
-    });
-})();
+    })();
+}
