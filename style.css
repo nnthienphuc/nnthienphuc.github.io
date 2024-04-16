@@ -341,6 +341,10 @@ span {
     text-align: right;
 }
 
+.timeline-item:nth-child(odd) p, h3{
+    text-align: left;
+}
+
 .timeline-item:nth-child(even) {
     padding-left: calc(50% + 30px);
 }
