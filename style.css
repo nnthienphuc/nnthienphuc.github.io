@@ -118,7 +118,7 @@ span {
     font-weight: 700;
     margin-top: 1.5rem;
     line-height: 1;
-    width: 600px;
+    /* width: 600px; */
 }
 
 .home-img {
@@ -129,7 +129,7 @@ span {
     position: relative;
     top: 3rem;
     width: 32vw;
-    left: 15rem;;
+    /* left: 15rem; */
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -146,8 +146,8 @@ span {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8;
-    margin-top: 1%;
-    max-width: 10000px;
+    /* margin-top: 1%; */
+    max-width: 1000px;
 }
 
 .social-icons a {
