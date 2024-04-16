@@ -225,7 +225,7 @@ span {
 .text-animation span::before {
     content: "Back-end Developer";
     color: var(--main-color);
-    animation: words 10s infinite;
+    animation: words 7s infinite;
 }
 
 /* .text-animation span::after{
