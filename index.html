@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <title>Responsive Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -10,14 +11,14 @@
 </head>
 <body>
     <header class= "header">
-        <a href="#home" class="logo">Nguyen Ngoc 
+        <a href="#" class="logo">Nguyen Ngoc 
             <span>Thien Phuc</span>
         </a>
 
         <i class='bx bx-menu' id ="menu-icon"></i>
 
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
+            <a href="#" class="active">Home</a>
             <a href="#education">Education</a>
             <a href="#services">Services</a>
             <a href="#testimonials">Testimonials</a>
@@ -69,7 +70,9 @@
                     <div class="timeline-date">2021</div>
                     <div class="timeline-content">
                         <h3>University</h3>
-                        <p>This is where I started to learn my first knowledge about programming, where I was taught enthusiastically by famous Masters and Doctors in the industry, not only dry theory but also practical knowledge through projects.</p>
+                        <p>I am an IT student at Posts and Telecommunications Institute of Technology 
+                            (<a href="https://portal.ptit.edu.vn/" target="_blank" style="color:#00ffee">PTIT</a>)
+                            where I started to learn my first knowledge about programming, where I was taught enthusiastically by famous Masters and Doctors in the industry, not only dry theory but also practical knowledge through projects.</p>
                     </div>
             </div>
 
@@ -130,18 +133,19 @@
     </section>
 
     <section class="contact" id = "contact">
-        <h2 class = "heading">Contact <span>Me</span><small style="font-size: 15px;">(This feature is currently down for maintenance, please contact via my <em>
-            <a href ="#home" style="color: aqua;">social networks</a></em> on home section. Sorry for the inconvenience)</small>
+        <h2 class = "heading">Contact <span>Me</span>
+        <br>
         </h2>
 
-        <form action = "">
+        <!-- <form action = ""> -->
+        <section class = "form-group">
             <div class="input-group">
                 <div class="input-box">
-                    <input type = "text" id="name" placeholder="Full name">
-                    <input type="email" id = "email" placeholder="Email">
+                    <input type = "text" id="toName" placeholder="Full name">
+                    <input type= "text" id = "toEmail" placeholder="Email">
                 </div>
                 <div class="input-box">
-                    <input type="number" id = "phone" placeholder="Phone Number">
+                    <input type="text" id = "phone" placeholder="Phone Number">
                     <input type="text" id="subject" placeholder="Subject">
                 </div>
             </div>
@@ -150,7 +154,8 @@
                 <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
                 <button onclick = "sendMail();" class = "btn">Send Message</button>
             </div>
-        </form>
+        </section>
+        <!-- </form> -->
     </section>
 
     <footer class = "footer">

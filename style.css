@@ -532,14 +532,15 @@ span {
 
 .contact {
     background-color: var(--bg-color);
+    margin-bottom: -15rem;
 }
 
 .contact h2 {
-    margin-bottom: 3rem;
+    margin-bottom: -10rem;
     color: white;
 }
 
-.contact form {
+.contact .form-group {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -548,14 +549,14 @@ span {
     text-align: center;
 }
 
-.contact form .input-box {
+.contact .form-group .input-box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.contact form .input-box input,
-.contact form textarea {
+.contact .form-group .input-box input,
+.contact .form-group textarea {
     width: 100%;
     padding: 2.5rem;
     font-size: 1.8rem;
@@ -567,7 +568,7 @@ span {
     resize: none;
 }
 
-.contact form .btn {
+.contact .form-group .btn {
     margin-top: 2rem;
 }
 
