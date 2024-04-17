@@ -24,29 +24,29 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 }
 
-// function sendMail() {
-//     (function() {
-//         emailjs.init("DvtCWTTErXVYkID27");
-//     })();
+function sendMail() {
+    (function() {
+        emailjs.init("DvtCWTTErXVYkID27");
+    })();
 
-//     var params = {
-//         toName: document.querySelector("#toName").value,
-//         toEmail: document.querySelector("#toEmail").value,
-//         phone: document.querySelector("#phone").value,
-//         subject: document.querySelector("#subject").value,
-//         message: document.querySelector("#message").value,
-//         // replyto: "noreply@gmail.com",
-//     };
+    var params = {
+        toName: document.querySelector("#toName").value,
+        toEmail: document.querySelector("#toEmail").value,
+        phone: document.querySelector("#phone").value,
+        subject: document.querySelector("#subject").value,
+        message: document.querySelector("#message").value,
+        // replyto: "noreply@gmail.com",
+    };
 
-//     var serviceID = "service_aubetcr";
-//     var templateID = "template_287p8yr";
+    var serviceID = "service_aubetcr";
+    var templateID = "template_287p8yr";
 
-//     emailjs.send(serviceID, templateID, params)
-//     .then( res => {
-//         alert("Email sent successfully!");
-//     })
-//     .catch();
-// }
+    emailjs.send(serviceID, templateID, params)
+    .then( res => {
+        alert("Email sent successfully!");
+    })
+    .catch();
+}
 
         // emailjs.send(serviceID, templateID, fullFormData)
         //     .then(function(response) {
