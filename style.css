@@ -411,7 +411,7 @@ span {
 }
 
 .services {
-    background: var(--bg-color);
+    background: var(--second-bg-color);
     color: black;
 }
 
@@ -468,7 +468,7 @@ span {
 }
 
 .projects {
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .projects-box {
