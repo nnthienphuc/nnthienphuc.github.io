@@ -1,2 +1,3 @@
 [# nnthienphuc.github.io]
 (https://www.nnthienphuc.tech/)
+This website is dedicated to presenting my personal narrative and professional endeavors in the realm of Software Development. It serves as a conduit for engagement with esteemed employers, esteemed clientele, and the broader community of skilled programmers. The website is meticulously developed using HTML, CSS, and JavaScript, and proudly bears my name on the DotTech domain. Upholding the highest standards of data security, it is fortified with an SSL certificate, as evidenced by the URL bar or at the site’s footer, ensuring the confidentiality of user-submitted contact information.
