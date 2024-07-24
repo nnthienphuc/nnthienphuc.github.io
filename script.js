@@ -42,10 +42,20 @@ function sendMail() {
     var templateID = "template_287p8yr";
 
     emailjs.send(serviceID, templateID, params)
-    .then( res => {
+    .then(res => {
         alert("Email sent successfully!");
+
+        // Reset the form fields
+        document.querySelector("#toName").value = '';
+        document.querySelector("#toEmail").value = '';
+        document.querySelector("#phone").value = '';
+        document.querySelector("#subject").value = '';
+        document.querySelector("#message").value = '';
     })
-    .catch();
+    .catch(err => {
+        alert("Failed to send email. Please try again later.");
+        console.error("Error sending email:", err);
+    });
 }
 
         // emailjs.send(serviceID, templateID, fullFormData)
