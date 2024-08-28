@@ -26,7 +26,7 @@ menuIcon.onclick = () => {
 
 function sendMail() {
     (function() {
-        emailjs.init("DvtCWTTErXVYkID27");
+        emailjs.init("at_MwKRnpK0Owe9uR");
     })();
 
     var params = {
