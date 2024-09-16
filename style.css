@@ -653,6 +653,187 @@ span {
     color: white;
 }
 
+/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone SE (320px x 568px) */
+@media (max-width: 320px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .home-img img {
+        width: 85vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+    
+    .navbar a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 12, 12 Pro, 13, 13 Pro (390px x 844px) */
+@media (max-width: 390px) {
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .home-img img {
+        width: 75vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 12 Mini, 13 Mini (360px x 780px) */
+@media (max-width: 360px) {
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        font-size: 1.1rem;
+    }
+
+    .home-img img {
+        width: 80vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+    }
+}
+
+/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 14 Pro Max (430px x 932px) */
+@media (max-width: 430px) {
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+
+    .home-content p {
+        font-size: 1.3rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+
+    .navbar a {
+        font-size: 1.6rem;
+    }
+}
+
+/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone XS, XS Max, XR, X */
+@media (max-width: 414px) {
+    .home-content h1 {
+        font-size: 3.8rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.1rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .home-img img {
+        width: 72vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media query cho các thiết bị lớn hơn (laptop, desktop) */
+@media (min-width: 768px) {
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+    }
+
+    .home-img img {
+        width: 60vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+
+    .navbar a {
+        font-size: 1.8rem;
+    }
+}
+
+
 @media(max-width:1285px) {
     html{
         font-size: 55%;
@@ -850,94 +1031,3 @@ span {
         line-height: 36px;
     }
 }
-
-/* Media query cho iPhone 12, 12 Pro, 13, 13 Pro (390px x 844px) */
-@media (max-width: 390px) {
-    .home-content h1 {
-        font-size: 3.5rem;
-    }
-
-    .home-content h3 {
-        font-size: 2rem;
-    }
-
-    .home-content p {
-        font-size: 1.2rem;
-    }
-
-    .home-img img {
-        width: 75vw;
-    }
-
-    .navbar {
-        width: 100%;
-        padding: 1rem;
-        background: rgba(0, 0, 0, 0.9);
-        border-radius: 0;
-    }
-
-    .navbar a {
-        font-size: 1.5rem;
-    }
-}
-
-/* Media query cho iPhone 12 Mini, 13 Mini (360px x 780px) */
-@media (max-width: 360px) {
-    .home-content h1 {
-        font-size: 3rem;
-    }
-
-    .home-content h3 {
-        font-size: 1.8rem;
-    }
-
-    .home-content p {
-        font-size: 1.1rem;
-    }
-
-    .home-img img {
-        width: 80vw;
-    }
-
-    .navbar {
-        width: 100%;
-        padding: 1rem;
-        background: rgba(0, 0, 0, 0.9);
-        border-radius: 0;
-    }
-
-    .navbar a {
-        font-size: 1.4rem;
-    }
-}
-
-/* Media query cho iPhone SE (320px x 568px) */
-@media (max-width: 320px) {
-    .home-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .home-content h3 {
-        font-size: 1.6rem;
-    }
-
-    .home-content p {
-        font-size: 1rem;
-    }
-
-    .home-img img {
-        width: 85vw;
-    }
-
-    .navbar {
-        width: 100%;
-        padding: 1rem;
-        background: rgba(0, 0, 0, 0.9);
-        border-radius: 0;
-    }
-
-    .navbar a {
-        font-size: 1.2rem;
-    }
-}
-
