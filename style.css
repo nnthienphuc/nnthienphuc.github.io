@@ -715,6 +715,10 @@ span {
 
 /* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 12, 12 Pro, 13, 13 Pro (390px x 844px) */
 @media (max-width: 390px) {
+    .home-content {
+        padding: 5rem 5%;
+    }
+
     .home-content h1 {
         font-size: 3.5rem;
     }
