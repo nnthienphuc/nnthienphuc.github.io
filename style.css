@@ -683,36 +683,6 @@ span {
     }
 }
 
-/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 12, 12 Pro, 13, 13 Pro (390px x 844px) */
-@media (max-width: 390px) {
-    .home-content h1 {
-        font-size: 3.5rem;
-    }
-
-    .home-content h3 {
-        font-size: 2rem;
-    }
-
-    .home-content p {
-        font-size: 1.2rem;
-    }
-
-    .home-img img {
-        width: 75vw;
-    }
-
-    .navbar {
-        width: 100%;
-        padding: 1rem;
-        background: rgba(0, 0, 0, 0.9);
-        border-radius: 0;
-    }
-
-    .navbar a {
-        font-size: 1.5rem;
-    }
-}
-
 /* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 12 Mini, 13 Mini (360px x 780px) */
 @media (max-width: 360px) {
     .home-content h1 {
@@ -743,22 +713,22 @@ span {
     }
 }
 
-/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 14 Pro Max (430px x 932px) */
-@media (max-width: 430px) {
+/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 12, 12 Pro, 13, 13 Pro (390px x 844px) */
+@media (max-width: 390px) {
     .home-content h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .home-content h3 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .home-content p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .home-img img {
-        width: 70vw;
+        width: 75vw;
     }
 
     .navbar {
@@ -769,11 +739,11 @@ span {
     }
 
     .navbar a {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 }
 
-/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone XS, XS Max, XR, X */
+/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone XS, XS Max, XR, X (414px) */
 @media (max-width: 414px) {
     .home-content h1 {
         font-size: 3.8rem;
@@ -803,22 +773,22 @@ span {
     }
 }
 
-/* Media query cho các thiết bị lớn hơn (laptop, desktop) */
-@media (min-width: 768px) {
+/* Media query cho các thiết bị nhỏ hơn hoặc bằng iPhone 14 Pro Max (430px x 932px) */
+@media (max-width: 430px) {
     .home-content h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .home-content h3 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .home-content p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .home-img img {
-        width: 60vw;
+        width: 70vw;
     }
 
     .navbar {
@@ -829,106 +799,7 @@ span {
     }
 
     .navbar a {
-        font-size: 1.8rem;
-    }
-}
-
-
-@media(max-width:1285px) {
-    html{
-        font-size: 55%;
-    }
-    .services-container {
-        padding-bottom: 7rem;
-        grid-template-columns: repeat(2,1fr);
-        margin: 0 5rem;
-    }
-}
-
-@media(max-width:991px) {
-    header {
-        padding: 2rem 3%;
-    }
-    section {
-        padding: 10rem 3% 2rem;
-    }
-    .timeline-items::before {
-        left: 7px;
-    }
-    .timeline-item:nth-child(odd) {
-        padding-right: 0;
-        text-align: left;
-    }
-    .timeline-item:nth-child(odd),
-    .timeline-item:nth-child(even) {
-        padding-left: 37px;
-    }
-    .timeline-dot {
-        left: 0;
-    }
-    .services {
-        padding-bottom: 7rem;
-    }
-    .projects .wrapper {
-        grid-template-columns: repeat(1,1fr);
-    }
-    .contact form {
-        flex-direction: column;
-    }
-    .footer {
-        padding: 2rem 3%;
-    }
-}
-
-@media(max-width:895px) {
-    #menu-icon {
-        display: block;
-    }
-    .navbar {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 50%;
-        padding: 1rem 3%;
-        background: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        border-bottom-left-radius: 2rem;
-        border-left: 2px solid var(--main-color);
-        border-bottom: 2px solid var(--main-color);
-        display: none;
-    }
-    .navbar.active {
-        display: block;
-    }
-    .navbar a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-        color: white;
-    }
-    .home {
-        flex-direction: column-reverse;
-        margin: 5rem 4rem;
-    }
-    .home-content h3 {
-        font-size: 2.6rem;
-    }
-    .home-content h1 {
-        font-size: 8rem;
-        margin-top: 3rem;
-    }
-    .home-content p {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    .home-img img {
-        width: 56vw;
-    }
-    .services h2 {
-        margin-bottom: 3rem;
-    }
-    .services-container {
-        grid-template-columns: repeat(1,1fr);
+        font-size: 1.6rem;
     }
 }
 
@@ -1029,5 +900,104 @@ span {
         width: 36px;
         height: 36px;
         line-height: 36px;
+    }
+}
+
+@media(max-width:895px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 50%;
+        padding: 1rem 3%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(20px);
+        border-bottom-left-radius: 2rem;
+        border-left: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--main-color);
+        display: none;
+    }
+    .navbar.active {
+        display: block;
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+    .home {
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+    .home-content p {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .home-img img {
+        width: 56vw;
+    }
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+    .services-container {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media(max-width: 991px) {
+    header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% 2rem;
+    }
+    .timeline-items::before {
+        left: 7px;
+    }
+    .timeline-item:nth-child(odd) {
+        padding-right: 0;
+        text-align: left;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        padding-left: 37px;
+    }
+    .timeline-dot {
+        left: 0;
+    }
+    .services {
+        padding-bottom: 7rem;
+    }
+    .projects .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact form {
+        flex-direction: column;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+/* Media query cho các thiết bị giữa các kích thước (1285px, 991px, 895px) */
+@media(max-width: 1285px) {
+    html {
+        font-size: 55%;
+    }
+    .services-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5rem;
     }
 }
