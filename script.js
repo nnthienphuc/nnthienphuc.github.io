@@ -13,7 +13,7 @@ window.onscroll = () => {
         if (top >= offset && top < offset + height) {
             navLinks.forEach (links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a [href*=' + id + ' ]').classList.add('active')
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
             })
         }
     })
@@ -25,6 +25,10 @@ menuIcon.onclick = () => {
 }
 
 function sendMail() {
+    const sendButton = document.querySelector('.form-group .btn');
+    console.log(sendButton);
+    sendButton.disabled = true; 
+
     (function() {
         emailjs.init("at_MwKRnpK0Owe9uR");
     })();
@@ -55,6 +59,9 @@ function sendMail() {
     .catch(err => {
         alert("Failed to send email. Please try again later.");
         console.error("Error sending email:", err);
+    })
+    .finally(() => {
+        sendButton.disabled = false; 
     });
 }
 

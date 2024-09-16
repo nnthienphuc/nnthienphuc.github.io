@@ -128,13 +128,14 @@ span {
 .home-img img {
     position: relative;
     top: 3rem;
-    width: 32vw;
-    /* left: 15rem; */
+    width: 100%; 
+    max-width: 32vw; 
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
 }
+
 
 .home-img img:hover {
     box-shadow: 0 0 25px var(--main-color),
@@ -749,3 +750,194 @@ span {
         grid-template-columns: repeat(1,1fr);
     }
 }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 2rem 5%;
+    }
+
+    .logo {
+        font-size: 2.4rem;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+        margin-top: 5rem;
+        gap: 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.4rem;
+    }
+
+    .home-content p {
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+
+    .home-img img {
+        width: 60vw;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 2rem;
+    }
+
+    .timeline-items::before {
+        display: none;
+    }
+
+    .timeline-item {
+        text-align: center;
+        padding: 0;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .project-item {
+        min-width: 90%;
+        max-width: 100%;
+    }
+
+    .contact .form-group {
+        flex-direction: column;
+    }
+
+    .contact .form-group .input-box input,
+    .contact .form-group textarea {
+        padding: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .contact .form-group .btn {
+        font-size: 1.6rem;
+    }
+
+    .footer {
+        padding: 2rem;
+    }
+
+    .footer ul li {
+        padding: 0 10px;
+    }
+
+    .footer .social a {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+    }
+}
+
+/* Media query cho iPhone 12, 12 Pro, 13, 13 Pro (390px x 844px) */
+@media (max-width: 390px) {
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-content p {
+        font-size: 1.2rem;
+    }
+
+    .home-img img {
+        width: 75vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media query cho iPhone 12 Mini, 13 Mini (360px x 780px) */
+@media (max-width: 360px) {
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        font-size: 1.1rem;
+    }
+
+    .home-img img {
+        width: 80vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+    }
+}
+
+/* Media query cho iPhone SE (320px x 568px) */
+@media (max-width: 320px) {
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .home-content p {
+        font-size: 1rem;
+    }
+
+    .home-img img {
+        width: 85vw;
+    }
+
+    .navbar {
+        width: 100%;
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        border-radius: 0;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+    }
+}
+
