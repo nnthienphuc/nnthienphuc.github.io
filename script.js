@@ -37,7 +37,7 @@ function sendMail() {
         toName: document.querySelector("#toName").value,
         toEmail: document.querySelector("#toEmail").value,
         phone: document.querySelector("#phone").value,
-        subject: document.querySelector("#subject").value,
+        subject: "This is an automated email to confirm that we received your message.",
         message: document.querySelector("#message").value,
         // replyto: "noreply@gmail.com",
     };
