@@ -96,7 +96,7 @@ section {
     align-items: baseline;
     text-align: left;
     justify-content: center;
-    margin-top: rem;
+    /* margin-top: rem; */
 }
 
 span {
@@ -150,7 +150,8 @@ span {
     line-height: 1.8;
     margin-bottom: 1rem;
     margin-top: 1.5rem;
-    max-width: 1000px;
+    /* max-width: 1000px; */
+    max-width: 62rem;
 }
 
 .social-icons a {
