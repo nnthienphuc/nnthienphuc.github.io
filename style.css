@@ -777,6 +777,12 @@ span {
     .services-container {
         grid-template-columns: repeat(1,1fr);
     }
+    .projects .project-item {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .projects .project-item img {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Tablets and larger phones */
@@ -941,6 +947,7 @@ span {
         font-size: 2.4rem;
     }
     .home .home-content p {
+        max-block-size: 1;
         font-size: 1.8rem;
     }
     .education h1 {
