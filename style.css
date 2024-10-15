@@ -116,7 +116,7 @@ span {
     /* width: 600px; */
 }
 
-.home-content h3 {
+.home-content h2 {
     margin-bottom: 1rem;
     margin-top: 1.5rem;
     font-size: 3.5rem;
@@ -309,7 +309,7 @@ span {
     background: var(--second-bg-color);
 }
 
-.education h2 {
+.education h1 {
     margin-bottom: 5rem;
 }
 
@@ -387,7 +387,7 @@ span {
     box-shadow: 0 0 25px var(--main-color);
 }
 
-.timeline-content h3 {
+.timeline-content h2 {
     font-size: 20px;
     color: white;
     margin: 0 0 10px;
@@ -421,7 +421,7 @@ span {
     display: grid;
 }
 
-.services h2 {
+.services h1 {
     margin-bottom: 5rem;
     color: white;
 }
@@ -460,6 +460,7 @@ span {
 @media (max-width: 767px) {
     .service-box {
         min-height: auto; /* Tự điều chỉnh chiều cao theo nội dung */
+        min-width: auto; /* Tự điều chỉnh chiều rộng theo nội dung */
         padding: 1.5rem; /* Giảm padding trên màn hình nhỏ */
     }
 }
@@ -474,7 +475,7 @@ span {
     padding: 1.5rem;
 }
 
-.service-info h4 {
+.service-info h2 {
     font-size: 3rem;
     font-weight: 800;
     line-height: 1.5;
@@ -569,7 +570,7 @@ span {
     /* margin-bottom: -15rem; */
 }
 
-.contact h2 {
+.contact h1 {
     margin-bottom: -10rem;
     color: white;
 }
@@ -756,7 +757,7 @@ span {
         flex-direction: column-reverse;
         margin: 5rem 4rem;
     }
-    .home .home-content h3 {
+    .home .home-content h2 {
         font-size: 2.6rem;
     }
     .home .home-content h1 {
@@ -770,7 +771,7 @@ span {
     .home .home-img img {
         width: 56vw;
     }
-    .services h2 {
+    .services h1 {
         margin-bottom: 3rem;
     }
     .services-container {
@@ -823,7 +824,7 @@ span {
         font-size: 4rem;
     }
 
-    .home .home-content h3 {
+    .home .home-content h2 {
         font-size: 2.4rem;
     }
 
@@ -848,7 +849,7 @@ span {
         font-size: 4rem;
     }
 
-    .home .home-content h3 {
+    .home .home-content h2 {
         font-size: 2.8rem;
         text-align: center;
     }
@@ -867,13 +868,13 @@ span {
     }
 
 
-    .education h2 {
+    .education h1 {
         margin-top: -10rem;
         margin-bottom: 0rem;
         font-size: 4rem;
     }
 
-    .education .timeline-content h3, .education .timeline-date {
+    .education .timeline-content h2, .education .timeline-date {
         font-size: 2.5rem;
     }
     
@@ -887,7 +888,7 @@ span {
         max-width: 52rem;
     }
     
-    .projects h2 {
+    .projects h1 {
         margin-top: -15rem;
         margin-bottom: 0rem;
         font-size: 4rem;
@@ -907,13 +908,13 @@ span {
         font-size: 2rem;
     }
 
-    .services h2 {
+    .services h1 {
         margin-top: -5rem;
         margin-bottom: 5rem;
         font-size: 4rem;
     }
 
-    .services .service-info h4 {
+    .services .service-info h2 {
         font-size: 2.5rem;
     }
 
@@ -921,7 +922,7 @@ span {
         font-size: 2rem;
     }
 
-    .contact h2 {
+    .contact h1 {
         margin-top: -17rem;
         margin-bottom: -12rem;
         font-size: 4rem;
@@ -933,7 +934,7 @@ span {
     .home .home-content h1 {
         font-size: 3.8rem;
     }
-    .home .home-content h3 {
+    .home .home-content h2 {
         font-size: 2.6rem;
     }
     .home .text-animation {
@@ -942,10 +943,10 @@ span {
     .home .home-content p {
         font-size: 1.8rem;
     }
-    .education h2 {
+    .education h1 {
         font-size: 3.8rem;
     }
-    .education .timeline-content h3, .education .timeline-date {
+    .education .timeline-content h2, .education .timeline-date {
         font-size: 2.4rem;
     }
     .education .timeline-content p {
@@ -954,7 +955,7 @@ span {
     .projects .project-item {
         min-width: 50rem;
     }
-    .projects h2 {
+    .projects h1 {
         font-size: 3.8rem;
     }
     .projects .project-item h2 {
@@ -963,16 +964,16 @@ span {
     .projects .project-item p {
         font-size: 1.8rem;
     }
-    .services h2 {
+    .services h1 {
         font-size: 3.8rem;
     }
-    .services .service-info h4 {
+    .services .service-info h2 {
         font-size: 2.4rem;
     }
     .services .service-info p {
         font-size: 1.8rem;
     }
-    .contact h2 {
+    .contact h1 {
         font-size: 3.8rem;
     }
 }
@@ -982,7 +983,7 @@ span {
     .home .home-content h1 {
         font-size: 3.6rem;
     }
-    .home .home-content h3 {
+    .home .home-content h2 {
         font-size: 2.5rem;
     }
     .home .text-animation {
@@ -991,10 +992,10 @@ span {
     .home .home-content p {
         font-size: 1.7rem;
     }
-    .education h2 {
+    .education h1 {
         font-size: 3.6rem;
     }
-    .education .timeline-content h3, .education .timeline-date {
+    .education .timeline-content h2, .education .timeline-date {
         font-size: 2.3rem;
     }
     .education .timeline-content p {
@@ -1012,16 +1013,16 @@ span {
     .projects .project-item p {
         font-size: 1.7rem;
     }
-    .services h2 {
+    .services h1 {
         font-size: 3.6rem;
     }
-    .services .service-info h4 {
+    .services .service-info h2 {
         font-size: 2.3rem;
     }
     .services .service-info p {
         font-size: 1.7rem;
     }
-    .contact h2 {
+    .contact h1 {
         font-size: 3.6rem;
     }
 }
@@ -1031,7 +1032,7 @@ span {
     .home .home-content h1 {
         font-size: 3.4rem;
     }
-    .home .home-content h3 {
+    .home .home-content h2 {
         font-size: 2.4rem;
     }
     .home .text-animation {
@@ -1040,10 +1041,10 @@ span {
     .home .home-content p {
         font-size: 1.6rem;
     }
-    .education h2 {
+    .education h1 {
         font-size: 3.4rem;
     }
-    .education .timeline-content h3, .education .timeline-date {
+    .education .timeline-content h2, .education .timeline-date {
         font-size: 2.2rem;
     }
     .education .timeline-content p {
@@ -1052,7 +1053,7 @@ span {
     .projects .project-item {
         min-width: 46rem;
     }
-    .projects h2 {
+    .projects h1 {
         font-size: 3.4rem;
     }
     .projects .project-item h2 {
@@ -1061,16 +1062,16 @@ span {
     .projects .project-item p {
         font-size: 1.6rem;
     }
-    .services h2 {
+    .services h1 {
         font-size: 3.4rem;
     }
-    .services .service-info h4 {
+    .services .service-info h2 {
         font-size: 2.2rem;
     }
     .services .service-info p {
         font-size: 1.6rem;
     }
-    .contact h2 {
+    .contact h1 {
         font-size: 3.4rem;
     }
 }
@@ -1081,7 +1082,7 @@ span {
         font-size: 3.2rem;
     }
 
-    .home .home-content h3 {
+    .home .home-content h2 {
         font-size: 2.3rem;
         text-align: center;
     }
@@ -1098,13 +1099,13 @@ span {
         max-width: 40rem;
     }
 
-    .education h2 {
+    .education h1 {
         margin-top: -8rem;
         margin-bottom: 0rem;
         font-size: 3.2rem;
     }
 
-    .education .timeline-content h3, 
+    .education .timeline-content h2, 
     .education .timeline-date {
         font-size: 2.1rem;
     }
@@ -1119,7 +1120,7 @@ span {
         max-width: 44rem;
     }
 
-    .projects h2 {
+    .projects h1 {
         margin-top: -12rem;
         margin-bottom: 0rem;
         font-size: 3.2rem;
@@ -1141,13 +1142,13 @@ span {
         font-size: 1.5rem;
     }
 
-    .services h2 {
+    .services h1 {
         margin-top: -4rem;
         margin-bottom: 5rem;
         font-size: 3.2rem;
     }
 
-    .services .service-info h4 {
+    .services .service-info h2 {
         font-size: 2.1rem;
     }
 
@@ -1155,7 +1156,7 @@ span {
         font-size: 1.5rem;
     }
 
-    .contact h2 {
+    .contact h1 {
         margin-top: -15rem;
         margin-bottom: -10rem;
         font-size: 3.2rem;
