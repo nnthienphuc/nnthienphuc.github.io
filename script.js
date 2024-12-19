@@ -53,7 +53,7 @@ function sendMail() {
         document.querySelector("#toName").value = '';
         document.querySelector("#toEmail").value = '';
         document.querySelector("#phone").value = '';
-        document.querySelector("#subject").value = '';
+        // document.querySelector("#subject").value = '';
         document.querySelector("#message").value = '';
     })
     .catch(err => {
