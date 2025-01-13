@@ -1234,3 +1234,59 @@ span {
         font-size: 3.2rem;
     }
 }
+
+/* Responsive cho màn hình nhỏ hơn 991px (tablet và mobile) */
+@media (max-width: 991px) {
+    .projects .wrapper {
+        grid-template-columns: 1fr; /* Hiển thị 1 project mỗi hàng */
+        gap: 2rem; /* Khoảng cách giữa các project */
+    }
+
+    .project-item {
+        padding: 1.5rem; /* Giảm padding */
+        text-align: center; /* Căn giữa nội dung */
+    }
+
+    .project-item img {
+        width: 70%; /* Giảm kích thước ảnh */
+        max-width: 200px;
+        height: auto;
+        margin: 0 auto; /* Căn giữa ảnh */
+        border-radius: 50%; /* Giữ hình tròn cho ảnh */
+    }
+
+    .project-item h2 {
+        font-size: 2rem; /* Giảm kích thước tiêu đề */
+        margin-bottom: 1rem;
+    }
+
+    .project-item p {
+        font-size: 1.4rem; /* Giảm kích thước nội dung */
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Responsive cho màn hình nhỏ hơn 767px (smartphone) */
+@media (max-width: 767px) {
+    .projects .wrapper {
+        padding: 0 1rem; /* Thêm padding để tránh sát biên */
+    }
+
+    .project-item img {
+        width: 60%; /* Giảm kích thước ảnh hơn nữa */
+        max-width: 150px;
+    }
+
+    .project-item h2 {
+        font-size: 1.8rem; /* Nhỏ hơn để phù hợp với màn hình nhỏ */
+    }
+
+    .project-item p {
+        font-size: 1.2rem; /* Giảm kích thước chữ */
+    }
+
+    .project-item a {
+        font-size: 1.2rem; /* Giảm kích thước link */
+    }
+}
