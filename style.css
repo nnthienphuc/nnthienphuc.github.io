@@ -849,54 +849,54 @@ span {
     }
 }
 
-/* Home Section Fix */
-@media (max-width: 767px) {
+/* Điều chỉnh toàn bộ kích thước cho màn hình nhỏ */
+@media (max-width: 430px) {
+    /* Home Section */
     .home {
-        flex-direction: column;
-        margin: 5rem 4rem;
+        padding: 5rem 2rem;
     }
     .home .home-content h1 {
-        font-size: 6rem;
-        text-align: center;
+        font-size: 4rem; /* Giảm kích thước tiêu đề */
     }
     .home .home-content h2 {
-        font-size: 2.8rem;
-        text-align: center;
+        font-size: 2.5rem; /* Giảm kích thước tiêu đề phụ */
     }
     .home .home-content p {
-        font-size: 1.6rem;
-        line-height: 1.8;
-        text-align: center;
-        max-width: 90%;
+        font-size: 1.4rem; /* Giảm kích thước nội dung */
+        line-height: 1.6;
+        max-width: 90%; /* Hạn chế chiều rộng tối đa */
         margin: 0 auto;
     }
     .home .home-img img {
-        width: 80vw;
-        max-width: 320px;
+        width: 60vw; /* Thu nhỏ kích thước hình ảnh */
+        max-width: 280px;
     }
-}
 
-/* Projects Section Fix */
-@media (max-width: 767px) {
+    /* Projects Section */
+    .projects {
+        padding: 5rem 2rem;
+    }
+    .projects h1 {
+        font-size: 3rem; /* Giảm kích thước tiêu đề */
+        text-align: center;
+    }
     .projects .wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        grid-template-columns: 1fr; /* Hiển thị từng cột */
+        gap: 1.5rem;
     }
     .projects .project-item {
-        min-width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 2rem;
+        padding: 1.5rem; /* Thu nhỏ khoảng cách trong project item */
+        font-size: 1.4rem; /* Giảm kích thước phông chữ */
     }
     .projects .project-item img {
-        width: 100%;
+        width: 80%; /* Giảm kích thước ảnh */
+        max-width: 200px;
         height: auto;
         margin-bottom: 1rem;
     }
     .projects .project-item p {
-        font-size: 1.4rem;
+        font-size: 1.4rem; /* Giảm kích thước chữ nội dung */
         line-height: 1.6;
-        text-align: center;
     }
 }
 
