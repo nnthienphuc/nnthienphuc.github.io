@@ -849,6 +849,57 @@ span {
     }
 }
 
+/* Home Section Fix */
+@media (max-width: 767px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+    .home .home-content h1 {
+        font-size: 6rem;
+        text-align: center;
+    }
+    .home .home-content h2 {
+        font-size: 2.8rem;
+        text-align: center;
+    }
+    .home .home-content p {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .home .home-img img {
+        width: 80vw;
+        max-width: 320px;
+    }
+}
+
+/* Projects Section Fix */
+@media (max-width: 767px) {
+    .projects .wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .projects .project-item {
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    .projects .project-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    .projects .project-item p {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+}
+
 /* iPhone 14 Pro Max */
 @media (max-width: 430px) {
     .home .home-content h1 {
