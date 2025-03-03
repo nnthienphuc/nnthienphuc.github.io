@@ -250,25 +250,14 @@ span {
 }
 
 @keyframes words {
-    0%, 
-    20% {
+    0%, 33% {
         content: "Desktop Application Developer";
     }
-    21%,
-    40% {
+    34%, 66% {
         content: "Java Developer";
     }
-    41%,
-    60% {
+    67%, 100% {
         content: "Back-end Developer";
-    }
-    61%,
-    80% {
-        content: "Desktop Application Developer";
-    }
-    81%,
-    100% {
-        content: "Java Developer";
     }
 }
 
