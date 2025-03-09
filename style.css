@@ -90,14 +90,24 @@ section {
     margin-top: 10%;
 }
 
-.home-content {
+/* .home-content {
     display: flex;
     flex-direction: column;
     align-items: baseline;
     text-align: left;
     justify-content: center;
-    /* margin-top: rem; */
+} */
+
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Đảm bảo căn giữa */
+    text-align: center; /* Văn bản canh giữa trên mobile */
+    justify-content: center;
+    max-width: 90vw; /* Giữ nội dung trong khung màn hình */
+    overflow: hidden; /* Tránh tràn nội dung */
 }
+
 
 span {
     color: var(--main-color);
@@ -131,11 +141,13 @@ span {
     position: relative;
     top: 3rem;
     width: 100%; 
-    max-width: 32vw; 
+    /* max-width: 32vw;  */
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    max-width: 90vw; /* Giữ ảnh trong giới hạn màn hình */
+    height: auto;
 }
 
 .home-img img:hover {
@@ -508,7 +520,7 @@ span {
 }
 
 
-.project-item {
+/* .project-item {
     min-width: 550px;
     max-width: 450px;
     background: rgba(0, 0, 0, 0.7);
@@ -525,7 +537,26 @@ span {
     gap: 1.5rem;
     color: white;
     transition: 0.4s ease-in-out;
+} */
+
+.project-item {
+    width: 100%; /* Để nó co dãn theo màn hình */
+    max-width: 450px; /* Giữ kích thước hợp lý */
+    background: rgba(0, 0, 0, 0.7);
+    border: 3px solid var(--main-color);
+    border-radius: 2rem;
+    padding: 30px 60px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    color: white;
+    transition: 0.4s ease-in-out;
 }
+
 
 .project-item:hover {
     border: 3px solid var(--main-color);
@@ -839,6 +870,31 @@ span {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse; /* Đưa ảnh xuống dưới */
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Giảm kích thước tiêu đề */
+    }
+
+    .home-content h2 {
+        font-size: 2.5rem; /* Giảm kích thước phụ đề */
+    }
+
+    .home-content p {
+        font-size: 1.6rem; /* Giảm kích thước chữ để vừa vặn */
+        max-width: 80vw; /* Giữ văn bản không tràn */
+    }
+
+    .home-img img {
+        max-width: 80vw; /* Giữ ảnh không tràn màn hình */
+    }
+}
+
 
 /* iPhone 14 Pro Max */
 @media (max-width: 430px) {
