@@ -500,9 +500,13 @@ span {
 
 .wrapper {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 project trên 1 dòng */
+    gap: 3rem; /* Tạo khoảng cách giữa các project */
+    max-width: 90%; /* Giữ tổng chiều rộng hợp lý */
+    margin: 0 auto; /* Căn giữa phần Projects */
+    justify-content: center; /* Giữ nội dung gọn vào giữa */
 }
+
 
 .project-item {
     min-width: 550px;
@@ -792,7 +796,7 @@ span {
     }
 
     .wrapper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr); /* Trở về 1 cột trên màn hình nhỏ */
     }
 }
 
