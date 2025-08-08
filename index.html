@@ -1,288 +1,504 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <title>Back-end Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel = "icon" type = "image/png" href="images/developer.png">
-    <link rel="preload" as="image" href="images/so-mi.webp" type="image/webp">
-</head>
-<body>
-    <header class= "header">
-        <a href="#" class="logo">Nguyen Ngoc 
-            <span>Thien Phuc</span>
-        </a>
+    <title>Nguyen Ngoc Thien Phuc - Back-end Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="images/developer.png" />
+    <link rel="preload" as="image" href="images/so-mi.webp" type="image/webp" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"
+        >Nguyen Ngoc
+        <span>Thien Phuc</span>
+      </a>
 
-        <i class='bx bx-menu' id ="menu-icon"></i>
+      <i class="bx bx-menu" id="menu-icon"></i>
 
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#education">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#education">Experience</a>
+        <a href="#projects">Core Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <section class = "home" id = "home">
-        <div class="home-content">
-            <h1>Hi, It's <span>Thien Phuc</span></h1>
-            <h2 class="text-animation">I'm a <span></span></h2>
-            <p>Welcome to my portfolio! As a passionate back-end developer, I specialize in building scalable and efficient systems. 
-                Proficient in C#, ASP.NET, Java and Spring Boot, I focus on crafting seamless APIs and optimizing system performance to meet user needs. 
-                With a problem-solving mindset and a commitment to continuous learning, I thrive in dynamic environments and enjoy collaborating on impactful projects. 
-                Let’s connect and create something amazing together!</p>
-                
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi, It's <span>Thien Phuc</span></h1>
+        <h2 class="text-animation">I'm a <span></span></h2>
+        <p>
+          Welcome to my portfolio! As a passionate back-end developer, I
+          specialize in building scalable and efficient systems. Proficient in
+          C#, ASP.NET, Java and Spring Boot, I focus on crafting seamless APIs
+          and optimizing system performance to meet user needs. With a
+          problem-solving mindset and a commitment to continuous learning, I
+          thrive in dynamic environments and enjoy collaborating on impactful
+          projects. Let’s connect and create something amazing together!
+        </p>
 
-            <div class="social-icons">
-                <a href = "https://www.linkedin.com/in/nnthienphuc/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href = "https://github.com/nnthienphuc" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href = "https://www.facebook.com/nnthienphuc" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-                <a href = "https://www.instagram.com/nnthienphuc/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href = "mailto:nnthienphuc@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
-            </div>
-
-            <div class="btn-group">
-                <a href = "#education" class = "btn">About Me</a>
-                <a href = "#contact" class = "btn">Contact Me</a>
-            </div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/nnthienphuc/" target="_blank"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a href="https://github.com/nnthienphuc" target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a href="https://www.facebook.com/nnthienphuc" target="_blank"
+            ><i class="bx bxl-facebook-circle"></i
+          ></a>
+          <a href="https://www.instagram.com/nnthienphuc/" target="_blank"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a href="mailto:nnthienphuc@gmail.com" target="_blank"
+            ><i class="bx bxl-gmail"></i
+          ></a>
         </div>
 
-            <div class="home-img">
-                <img src="images/so-mi.webp" alt ="" style="width: 100%; height:auto;">
-            </div>
+        <div class="btn-group">
+          <a href="#education" class="btn">About Me</a>
+          <a href="#contact" class="btn">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="home-img">
+        <img src="images/so-mi.webp" alt="" style="width: 100%; height: auto" />
+      </div>
     </section>
 
     <section class="education" id="education">
-        <h1 class="heading">Experience</h1>
-        <div class="timeline-items">
-    
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2025</div>
-                <div class="timeline-content">
-                    <h2>ASP.NET Back-end Intern at CFOX</h2>
-                    <p>Currently interning at <a href="https://cfox.vn/" target="_blank" style="color:#00ffee">CFOX TECH COMPANY LIMITED</a> as a Back-end Developer focusing on ASP.NET Core. Collaborating closely with senior engineers to build scalable APIs and enterprise-level backend features. Throughout the internship, I've received strong feedback for writing clean, maintainable code and quickly adapting to real-world development standards and workflows.</p>
-                </div>
-            </div>
-
-    
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2023</div>
-                <div class="timeline-content">
-                    <h2>Coursera</h2>
-                    <p>Throughout my collegiate studies, I recognized the imperative to expand my expertise to advance within the challenging realm of programming. Consequently, I embarked on a journey of self-education through the Coursera platform when I had no classes at university.</p>
-                </div>
-            </div>
-    
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2021</div>
-                <div class="timeline-content">
-                    <h2>University</h2>
-                    <p>As an IT student at the Posts and Telecommunications Institute of Technology 
-                        (<a href="https://portal.dtqt.edu.vn/" target="_blank" style="color:#00ffee">PTIT</a>), my academic journey began with an introduction to programming, mentored by esteemed industry professionals holding Master's and Doctoral degrees. Their guidance extended beyond theoretical concepts, encompassing hands-on experience through practical project work.</p>
-                </div>
-            </div>
-    
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2018</div>
-                <div class="timeline-content">
-                    <h2>High School</h2>
-                    <p>Driven by a lifelong passion for math, my academic endeavors brought me to enroll in a high school advanced math class. This experience paved the way for my subsequent exploration of the logical and systematic world of programming.</p>
-                </div>
-            </div>
-    
-        </div>
-    </section>
-    
-
-    <section class="projects" id = "projects">
-        <div class="projects-box">
-            <h1 class = "heading">Projects</h1>
-            <div class="wrapper">
-
-                <div class="project-item">
-                    <img src="images/book-store-api.png" alt="Bookstore RESTful API" loading="lazy">
-                    <h2>Bookstore RESTful API</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                        <i class='bx bxs-star' id="star"></i>
-                    </div>
-                    <p>
-                        This is a complete ASP.NET Core RESTful API designed to manage bookstore operations, including book inventory, customer data, staff accounts, orders, and promotional campaigns. Built with a clean layered architecture (Controller – Service – Repository), it adopts best practices like DTO validation, soft deletion, role-based authorization, and JWT authentication. The project also includes features such as email verification, password reset via secure token, and dynamic search filtering. Entity relationships are normalized (3NF), ensuring data integrity and maintainability. Ideal for both internal use and integration with frontend apps or external systems.
-                    </p>
-                    <p>
-                        <a href="https://github.com/nnthienphuc/BookStore-API" target="_blank" style="color: #00ffee; text-decoration: underline;">
-                            Click here to see my project source
-                        </a>
-                    </p>
-                </div>
-
-
-                <div class="project-item">
-                    <img src="images/digital-library-online-book-store-vector-19928920.jpg" alt ="Online Book Store" loading="lazy">
-                    <h2>Bookstore E-commerce Website</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star-half' id = "star-half"></i>
-                    </div>
-                    <p>This e-commerce bookstore was developed to provide a seamless online shopping experience for book lovers. It leverages a powerful technology stack, including Spring Boot and Python (FastAPI), to ensure efficient operations and personalized recommendations. The underlying database is meticulously designed in 3NF, guaranteeing data integrity and scalability. Users can easily browse and purchase books, track their orders, and even receive tailored suggestions based on their browsing history. For administrators, the platform offers a comprehensive dashboard to manage products, customers, employees, and sales data, providing valuable insights through detailed analytics.</p>
-                    <p><a href="https://github.com/nnthienphuc/PTIT-Bookstore-E-commerce-Website" target="_blank" style="color: #00ffee; text-decoration: underline;">Click here to see my project source</a></p>
-                </div>
-
-                <div class="project-item">
-                    <img src="images/Supply-chain-ecosystem-infographic.jpg" alt ="Supply Management" loading="lazy">
-                    <h2>Supply Management Project</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <!-- <i class='bx bxs-star-half' id = "star-half"></i> -->
-                    </div>
-                    <p>This is a WinApp product used for managing a company specializing in selling supplies. It encompasses inventory, employees, warehouses, branches, customers, sales, purchases, and related invoices. The application is designed to support distributed database systems and is applied to standardize data into third normal form (3NF) and distribute data across multiple servers to ensure data security. It is developed using the C# programming language for code processing, and .NET is utilized to build desktop applications. DevExpress is employed for creating user interfaces and generating reports.</p>
-                    <p><a href="https://github.com/nnthienphuc/PTIT-Co-So-Du-Lieu-Phan-Tan-De-Tai-Quan-Ly-Vat-Tu" target="_blank" style="color: #00ffee; text-decoration: underline;">Click here to see my project source</a></p>
-                </div>
-
-                <div class="project-item">
-                    <img src="images/book-store.jpg" alt ="Book Store" loading="lazy">
-                    <h2>Book Store Management Project</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <!-- <i class='bx bxs-star' id = "no-star"></i> -->
-                    </div>
-                    <p>This WinApp product was developed to manage a small bookstore, encompassing books, employees, customers, sales, inventory, and related invoices. It was specifically designed for the Object-Oriented Programming (OOP) course and utilizes a database to standardize data in the third normal form (3NF). The application is built using Java to create objects and handle data structures and algorithms. Additionally, Java Swing is used to create user interfaces and relevant reports.</p>
-                    <p><a href="https://github.com/nnthienphuc/PTIT-Book-Store-Management-Project" target="_blank" style="color: #00ffee; text-decoration: underline;">Click here to see my project source</a></p>
-                </div>
-
-                <div class="project-item">
-                    <img src="images/developer.png" alt ="Back-end Developer Portfolio Website" loading="lazy">
-                    <h2>Back-end Developer Portfolio Website</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <!-- <i class='bx bxs-star' id = "no-star"></i> -->
-                    </div>
-                    <p><a href="https://www.nnthienphuc.tech/" style="color: #00ffee">This website </a>is dedicated to presenting my personal narrative and professional endeavors in the realm of Software Development. It serves as a conduit for engagement with esteemed employers, esteemed clientele, and the broader community of skilled programmers. The website is meticulously developed using HTML, CSS, and JavaScript, and proudly bears my name on the DotTech domain. Upholding the highest standards of data security, it is fortified with an SSL certificate, as evidenced by the URL bar or at the site’s footer, ensuring the confidentiality of user-submitted contact information.</p>
-                    <p><a href="https://github.com/nnthienphuc/nnthienphuc.github.io" target="_blank" style="color: #00ffee; text-decoration: underline;">Click here to see my project source</a></p>
-                </div>
-
-                <div class="project-item">
-                    <img src="images/electronics-store (Custom).jpg" alt ="Electronics Store" loading="lazy">
-                    <h2>Electronics Store Website</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star' id = "star"></i>
-                        <i class='bx bxs-star-half' id = "star-half"></i>
-                    </div>
-                    <p>This website was developed for the purpose of selling electronic devices such as phones, laptops, and iPads. It was created as part of the Web Programming course, with a database designed in third normal form (3NF) and meticulously crafted code. Despite the time constraints, I view this project as a stepping stone for improving subsequent endeavors.</p>
-                    <p><a href="https://github.com/nnthienphuc/PTIT-LAP-TRINH-WEB" target="_blank" style="color: #00ffee; text-decoration: underline;">Click here to see my project source</a></p>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    
-    <section class="services" id = "services">
-        <h1 class="heading">Services</h1>
-        <div class = "services-container">
-            <div class="service-box">
-                <div class="service-info">
-                    <h2>Back-end Development</h2>
-                    <p>Back-end development involves working on server-side software, focusing on everything that happens behind the scenes of a website. Ensuring that a website functions properly by managing databases, implementing back-end logic, creating and maintaining application programming interfaces (APIs), designing the architecture, and handling servers. Writing code that allows browsers to communicate with databases, enabling the storage, retrieval, and deletion of data.</p>
-                </div>
-            </div>
-
-            <div class="service-box">
-                <div class="service-info">
-                    <h2>Desktop Application Development</h2>
-                    <p>Desktop application development involves creating software applications that run on desktop computers. Desktop application developers focus on the core functionality of the application, ensuring it performs efficiently and reliably. Working with application logic, data management, user interface design, and system integration. Using programming languages and frameworks to create applications that provide a seamless and intuitive user experience while managing data storage, retrieval, and processing on the local machine.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="contact" id = "contact">
-        <h1 class = "heading">Contact <span>Me</span>
-        <br>
-        </h1>
-
-        <!-- <form action = ""> -->
-        <section class = "form-group">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type = "text" id="toName" placeholder="Full name">
-                    <input type= "email" id = "toEmail" placeholder="Email">
-                    <input type="number" id = "phone" placeholder="Phone Number">
-                </div>
-            </div>
-
-            <div class="input-group-2">
-                <textarea name="" id="message" cols="80" rows="10" placeholder="Your Message"></textarea>
-                <button type="button" onclick="sendMail();" class="btn">Send Message</button>
-            </div>
-        </section>
-        <!-- </form> -->
-    </section>
-
-    <footer class = "footer">
-        <div class="social">
-            <a href = "https://www.linkedin.com/in/nnthienphuc/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href = "https://github.com/nnthienphuc" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href = "https://www.facebook.com/nnthienphuc" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
-                <a href = "https://www.instagram.com/nnthienphuc/" target="_blank"><i class='bx bxl-instagram'></i></a>
-                <a href = "mailto:nnthienphuc@gmail.com" target="_blank"><i class='bx bxl-gmail'></i></a>
+      <h1 class="heading">Experience</h1>
+      <div class="timeline-items">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025</div>
+          <div class="timeline-content">
+            <h2>ASP.NET Back-end Intern at CFOX</h2>
+            <p>
+              Currently interning at
+              <a href="https://cfox.vn/" target="_blank" style="color: #00ffee"
+                >CFOX TECH COMPANY LIMITED</a
+              >
+              as a Back-end Developer focusing on ASP.NET Core. Collaborating
+              closely with senior engineers to build scalable APIs and
+              enterprise-level backend features. Throughout the internship, I've
+              received strong feedback for writing clean, maintainable code and
+              quickly adapting to real-world development standards and
+              workflows.
+            </p>
+          </div>
         </div>
 
-        <ul class="list">
-            <li>
-                <a href ="#">FAQ</a>
-            </li>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023</div>
+          <div class="timeline-content">
+            <h2>Coursera</h2>
+            <p>
+              Throughout my collegiate studies, I recognized the imperative to
+              expand my expertise to advance within the challenging realm of
+              programming. Consequently, I embarked on a journey of
+              self-education through the Coursera platform when I had no classes
+              at university.
+            </p>
+          </div>
+        </div>
 
-            <li>
-                <a href ="#">About Me</a>
-            </li>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021</div>
+          <div class="timeline-content">
+            <h2>University</h2>
+            <p>
+              As an IT student at the Posts and Telecommunications Institute of
+              Technology (<a
+                href="https://portal.dtqt.edu.vn/"
+                target="_blank"
+                style="color: #00ffee"
+                >PTIT</a
+              >), my academic journey began with an introduction to programming,
+              mentored by esteemed industry professionals holding Master's and
+              Doctoral degrees. Their guidance extended beyond theoretical
+              concepts, encompassing hands-on experience through practical
+              project work.
+            </p>
+          </div>
+        </div>
 
-            <li>
-                <a href ="#services">Services</a>
-            </li>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2018</div>
+          <div class="timeline-content">
+            <h2>High School</h2>
+            <p>
+              Driven by a lifelong passion for math, my academic endeavors
+              brought me to enroll in a high school advanced math class. This
+              experience paved the way for my subsequent exploration of the
+              logical and systematic world of programming.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <li>
-                <a href ="#contact">Contact</a>
-            </li>
-        </ul>
-        <p class="copyright">
-            &copy 2024 Nguyen Ngoc Thien Phuc. All Rights Reserved
-        </p>
+    <section class="projects" id="projects">
+      <div class="projects-box">
+        <h1 class="heading">Core Projects</h1>
+        <div class="wrapper">
+          <div class="project-item">
+            <img
+              src="images/book-store-api.png"
+              alt="Bookstore RESTful API"
+              loading="lazy"
+            />
+            <h2>Bookshop RESTful API</h2>
+            <div class="rating">
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star-half" id="star-half"></i>
+            </div>
+            <p>
+              A complete ASP.NET Core RESTful API for bookstore operations
+              (inventory, customers, staff, orders, promotions) built with a
+              clean Controller–Service–Repository architecture. It includes DTO
+              validation, soft deletion, role-based authorization, and JWT
+              authentication, plus email verification, secure password reset,
+              and dynamic search filtering.
+              <strong>Revenue analytics</strong> are built-in — yearly reports
+              and custom date-range statistics — to track performance over time.
+              The app is <strong>Dockerized</strong> (Dockerfile &
+              docker-compose) for one-command deployment with environment-based
+              configs, ready for CI/CD.
+            </p>
+            <p>
+              <a
+                href="https://github.com/nnthienphuc/BookShop-API"
+                target="_blank"
+                style="color: #00ffee; text-decoration: underline"
+              >
+                Click here to see my project source
+              </a>
+            </p>
+          </div>
+
+          <div class="project-item">
+  <img
+    src="images/book-store-admin.png"
+    alt="Bookshop Admin Frontend"
+    loading="lazy"
+  />
+  <h2>Bookshop Admin Frontend</h2>
+  <div class="rating">
+    <i class="bx bxs-star" id="star"></i>
+    <i class="bx bxs-star" id="star"></i>
+    <i class="bx bxs-star" id="star"></i>
+    <i class="bx bxs-star" id="star"></i>
+    
+  </div>
+  <p>
+    An admin dashboard for managing the bookstore, built with <strong>ReactJS</strong> and integrated seamlessly with the Bookshop RESTful API. It features secure staff authentication (JWT), CRUD management for books, categories, promotions, and orders, plus customer notifications via email. 
+    Advanced tools include <strong>real-time revenue analytics</strong> (yearly & custom date range) and dynamic search/filtering. The interface is fully responsive, optimized with <strong>mdb-react-ui-kit</strong> for a clean, modern look. 
+    The app is <strong>Dockerized</strong> for fast deployment and easy scaling.
+  </p>
+  <p>
+    <a
+      href="https://github.com/nnthienphuc/BookShop-Admin-FrontEnd"
+      target="_blank"
+      style="color: #00ffee; text-decoration: underline"
+    >
+      Click here to see my project source
+    </a>
+  </p>
+</div>
+
+
+          <div class="project-item">
+            <img
+              src="images/digital-library-online-book-store-vector-19928920.jpg"
+              alt="Online Book Store"
+              loading="lazy"
+            />
+            <h2>Bookstore E-commerce Website (FastAPI)</h2>
+            <div class="rating">
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+            </div>
+            <p>
+              This e-commerce bookstore was developed to provide a seamless
+              online shopping experience for book lovers. It leverages a
+              powerful technology stack, including Spring Boot and Python
+              (FastAPI), to ensure efficient operations and personalized
+              recommendations. The underlying database is meticulously designed
+              in 3NF, guaranteeing data integrity and scalability. Users can
+              easily browse and purchase books, track their orders, and even
+              receive tailored suggestions based on their browsing history. For
+              administrators, the platform offers a comprehensive dashboard to
+              manage products, customers, employees, and sales data, providing
+              valuable insights through detailed analytics.
+            </p>
+            <p>
+              <a
+                href="https://github.com/nnthienphuc/PTIT-Bookstore-E-commerce-Website"
+                target="_blank"
+                style="color: #00ffee; text-decoration: underline"
+                >Click here to see my project source</a
+              >
+            </p>
+          </div>
+
+          <div class="project-item">
+            <img
+              src="images/Supply-chain-ecosystem-infographic.jpg"
+              alt="Supply Management"
+              loading="lazy"
+            />
+            <h2>Supply Management Project</h2>
+            <div class="rating">
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <!-- <i class='bx bxs-star-half' id = "star-half"></i> -->
+            </div>
+            <p>
+              This is a WinApp product used for managing a company specializing
+              in selling supplies. It encompasses inventory, employees,
+              warehouses, branches, customers, sales, purchases, and related
+              invoices. The application is designed to support distributed
+              database systems and is applied to standardize data into third
+              normal form (3NF) and distribute data across multiple servers to
+              ensure data security. It is developed using the C# programming
+              language for code processing, and .NET is utilized to build
+              desktop applications. DevExpress is employed for creating user
+              interfaces and generating reports.
+            </p>
+            <p>
+              <a
+                href="https://github.com/nnthienphuc/PTIT-Co-So-Du-Lieu-Phan-Tan-De-Tai-Quan-Ly-Vat-Tu"
+                target="_blank"
+                style="color: #00ffee; text-decoration: underline"
+                >Click here to see my project source</a
+              >
+            </p>
+          </div>
+
+          <div class="project-item">
+            <img src="images/book-store.jpg" alt="Book Store" loading="lazy" />
+            <h2>Book Store Management Project</h2>
+            <div class="rating">
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <!-- <i class='bx bxs-star' id = "no-star"></i> -->
+            </div>
+            <p>
+              This WinApp product was developed to manage a small bookstore,
+              encompassing books, employees, customers, sales, inventory, and
+              related invoices. It was specifically designed for the
+              Object-Oriented Programming (OOP) course and utilizes a database
+              to standardize data in the third normal form (3NF). The
+              application is built using Java to create objects and handle data
+              structures and algorithms. Additionally, Java Swing is used to
+              create user interfaces and relevant reports.
+            </p>
+            <p>
+              <a
+                href="https://github.com/nnthienphuc/PTIT-Book-Store-Management-Project"
+                target="_blank"
+                style="color: #00ffee; text-decoration: underline"
+                >Click here to see my project source</a
+              >
+            </p>
+          </div>
+
+          <div class="project-item">
+            <img
+              src="images/developer.png"
+              alt="Back-end Developer Portfolio Website"
+              loading="lazy"
+            />
+            <h2>Back-end Developer Portfolio Website</h2>
+            <div class="rating">
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <!-- <i class='bx bxs-star' id = "no-star"></i> -->
+            </div>
+            <p>
+              <a href="https://nnthienphuc.github.io/" style="color: #00ffee"
+                >This website </a
+              >is dedicated to presenting my personal narrative and professional
+              endeavors in the realm of Software Development. It serves as a
+              conduit for engagement with esteemed employers, esteemed
+              clientele, and the broader community of skilled programmers. The
+              website is meticulously developed using HTML, CSS, and JavaScript,
+              and proudly bears my name on the DotTech domain. Upholding the
+              highest standards of data security, it is fortified with an SSL
+              certificate, as evidenced by the URL bar or at the site’s footer,
+              ensuring the confidentiality of user-submitted contact
+              information.
+            </p>
+            <p>
+              <a
+                href="https://github.com/nnthienphuc/nnthienphuc.github.io"
+                target="_blank"
+                style="color: #00ffee; text-decoration: underline"
+                >Click here to see my project source</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <h1 class="heading">Services</h1>
+      <div class="services-container">
+        <div class="service-box">
+          <div class="service-info">
+            <h2>Back-end Development</h2>
+            <p>
+              Back-end development involves working on server-side software,
+              focusing on everything that happens behind the scenes of a
+              website. Ensuring that a website functions properly by managing
+              databases, implementing back-end logic, creating and maintaining
+              application programming interfaces (APIs), designing the
+              architecture, and handling servers. Writing code that allows
+              browsers to communicate with databases, enabling the storage,
+              retrieval, and deletion of data.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-box">
+          <div class="service-info">
+            <h2>Desktop Application Development</h2>
+            <p>
+              Desktop application development involves creating software
+              applications that run on desktop computers. Desktop application
+              developers focus on the core functionality of the application,
+              ensuring it performs efficiently and reliably. Working with
+              application logic, data management, user interface design, and
+              system integration. Using programming languages and frameworks to
+              create applications that provide a seamless and intuitive user
+              experience while managing data storage, retrieval, and processing
+              on the local machine.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h1 class="heading">
+        Contact <span>Me</span>
+        <br />
+      </h1>
+
+      <!-- <form action = ""> -->
+      <section class="form-group">
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" id="toName" placeholder="Full name" />
+            <input type="email" id="toEmail" placeholder="Email" />
+            <input type="number" id="phone" placeholder="Phone Number" />
+          </div>
+        </div>
+
+        <div class="input-group-2">
+          <textarea
+            name=""
+            id="message"
+            cols="80"
+            rows="10"
+            placeholder="Your Message"
+          ></textarea>
+          <button type="button" onclick="sendMail();" class="btn">
+            Send Message
+          </button>
+        </div>
+      </section>
+      <!-- </form> -->
+    </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a href="https://www.linkedin.com/in/nnthienphuc/" target="_blank"
+          ><i class="bx bxl-linkedin"></i
+        ></a>
+        <a href="https://github.com/nnthienphuc" target="_blank"
+          ><i class="bx bxl-github"></i
+        ></a>
+        <a href="https://www.facebook.com/nnthienphuc" target="_blank"
+          ><i class="bx bxl-facebook-circle"></i
+        ></a>
+        <a href="https://www.instagram.com/nnthienphuc/" target="_blank"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a href="mailto:nnthienphuc@gmail.com" target="_blank"
+          ><i class="bx bxl-gmail"></i
+        ></a>
+      </div>
+
+      <ul class="list">
+        <li>
+          <a href="#">FAQ</a>
+        </li>
+
+        <li>
+          <a href="#">About Me</a>
+        </li>
+
+        <li>
+          <a href="#services">Services</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+      <p class="copyright">
+        &copy 2024 Nguyen Ngoc Thien Phuc. All Rights Reserved
+      </p>
     </footer>
 
     <script src="script.js"></script>
-    
-    <script type="text/javascript"> //<![CDATA[
-        var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.trust-provider.com/" : "http://www.trustlogo.com/");
-        document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-      //]]></script>
-      <script language="JavaScript" type="text/javascript">
-        TrustLogo("https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png", "POSDV", "none");
-      </script>
-</body>
+
+    <script type="text/javascript">
+      //<![CDATA[
+      var tlJsHost =
+        window.location.protocol == "https:"
+          ? "https://secure.trust-provider.com/"
+          : "http://www.trustlogo.com/";
+      document.write(
+        unescape(
+          "%3Cscript src='" +
+            tlJsHost +
+            "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"
+        )
+      );
+      //]]>
+    </script>
+    <script language="JavaScript" type="text/javascript">
+      TrustLogo(
+        "https://www.positivessl.com/images/seals/positivessl_trust_seal_lg_222x54.png",
+        "POSDV",
+        "none"
+      );
+    </script>
+  </body>
 </html>
