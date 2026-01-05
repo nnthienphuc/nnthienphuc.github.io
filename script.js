@@ -2,6 +2,7 @@ let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
+let cooldownTimer = null;
 
 window.onscroll = () => {
   sections.forEach((sec) => {
@@ -26,57 +27,204 @@ menuIcon.onclick = () => {
   navbar.classList.toggle("active");
 };
 
-function sendMail() {
-  const sendButton = document.querySelector(".form-group .btn");
-  console.log(sendButton);
-  sendButton.disabled = true;
+// init EmailJS 1 lần thôi
+emailjs.init("at_MwKRnpK0Owe9uR");
 
-  (function () {
-    emailjs.init("at_MwKRnpK0Owe9uR");
-  })();
+// ===== anti-spam cooldown config =====
+const COOLDOWN_MS = 30000; // 30s
+const LAST_SENT_KEY = "contact_last_sent_at";
 
-  var params = {
-    toName: document.querySelector("#toName").value,
-    toEmail: document.querySelector("#toEmail").value,
-    phone: document.querySelector("#phone").value,
-    subject:
-      "This is an automated email to confirm that we received your message.",
-    message: document.querySelector("#message").value,
-    // replyto: "noreply@gmail.com",
-  };
-
-  var serviceID = "service_aubetcr";
-  var templateID = "template_287p8yr";
-
-  emailjs
-    .send(serviceID, templateID, params)
-    .then((res) => {
-      alert("Email sent successfully!");
-
-      // Reset the form fields
-      document.querySelector("#toName").value = "";
-      document.querySelector("#toEmail").value = "";
-      document.querySelector("#phone").value = "";
-      // document.querySelector("#subject").value = '';
-      document.querySelector("#message").value = "";
-    })
-    .catch((err) => {
-      alert("Failed to send email. Please try again later.");
-      console.error("Error sending email:", err);
-    })
-    .finally(() => {
-      sendButton.disabled = false;
-    });
+function getRemainingCooldownMs() {
+  const last = Number(localStorage.getItem(LAST_SENT_KEY) || "0");
+  const now = Date.now();
+  const remain = COOLDOWN_MS - (now - last);
+  return remain > 0 ? remain : 0;
 }
 
-// emailjs.send(serviceID, templateID, fullFormData)
-//     .then(function(response) {
-//         console.log('Email sent successfully', response);
-//         alert('Message sent successfully. Thank you!');
-//     }, function(error) {
-//         console.log('Email sending failed', error);
-//         alert('Oops! Something went wrong. Please try again later.');
-//     });
+// ===== show cooldown immediately on page load =====
+function applyCooldownOnLoad() {
+  const sendButton =
+    document.getElementById("sendBtn") ||
+    document.querySelector(".form-group .btn");
+  const statusEl = document.getElementById("formStatus");
+  if (!sendButton) return;
+
+  const oldText = sendButton.dataset.originalText || "Send Message";
+
+  const tick = () => {
+    const remain = getRemainingCooldownMs();
+
+    if (remain <= 0) {
+      sendButton.disabled = false;
+      sendButton.textContent = oldText;
+
+      if (statusEl) {
+        statusEl.textContent = "";
+        statusEl.className = "form-status";
+      }
+      return false;
+    }
+
+    const sec = Math.ceil(remain / 1000);
+    sendButton.disabled = true;
+    sendButton.textContent = `Wait ${sec}s`;
+
+    if (statusEl) {
+      statusEl.textContent = `Please wait ${sec}s before sending again.`;
+      statusEl.className = "form-status error";
+    }
+    return true;
+  };
+
+  // clear timer cũ để tránh nhiều interval
+  if (cooldownTimer) {
+    clearInterval(cooldownTimer);
+    cooldownTimer = null;
+  }
+
+  // chạy ngay + chạy mỗi giây nếu còn cooldown
+  if (tick()) {
+    cooldownTimer = setInterval(() => {
+      if (!tick()) {
+        clearInterval(cooldownTimer);
+        cooldownTimer = null;
+      }
+    }, 1000);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", applyCooldownOnLoad);
+
+// function startCooldownUI(btn, statusEl, oldText, cooldownMs) {
+//   const start = Date.now();
+//   btn.disabled = true;
+//   btn.classList.remove("is-loading");
+//   btn.textContent = "Try again soon";
+
+//   if (statusEl) {
+//     statusEl.textContent = "❌ Failed to send. Retry available soon.";
+//     statusEl.className = "form-status error";
+//   }
+
+//   const timer = setInterval(() => {
+//     const elapsed = Date.now() - start;
+//     const remain = cooldownMs - elapsed;
+
+//     if (remain <= 0) {
+//       clearInterval(timer);
+//       btn.disabled = false;
+//       btn.textContent = oldText;
+//       if (statusEl) {
+//         statusEl.textContent = "You can try sending again now.";
+//         statusEl.className = "form-status";
+//       }
+//       return;
+//     }
+
+//     const sec = Math.ceil(remain / 1000);
+//     if (statusEl) {
+//       statusEl.textContent = `❌ Failed to send. Retry available in ${sec}s.`;
+//       statusEl.className = "form-status error";
+//     }
+//   }, 1000);
+// }
+
+async function sendMail() {
+  const sendButton =
+    document.getElementById("sendBtn") ||
+    document.querySelector(".form-group .btn");
+
+  const statusEl = document.getElementById("formStatus");
+  const oldText =
+    (sendButton && sendButton.dataset.originalText) || "Send Message";
+
+  const setStatus = (msg, type) => {
+    if (!statusEl) return;
+    statusEl.textContent = msg;
+    statusEl.className = `form-status ${type || ""}`.trim();
+  };
+
+  // ===== cooldown check (FREE - localStorage) =====
+  const remain = getRemainingCooldownMs();
+  if (remain > 0) {
+    const sec = Math.ceil(remain / 1000);
+    setStatus(`Please wait ${sec}s before sending again.`, "error");
+    return;
+  }
+
+  // ===== validate =====
+  const toName = document.querySelector("#toName").value.trim();
+  const toEmail = document.querySelector("#toEmail").value.trim();
+  const phone = document.querySelector("#phone").value.trim();
+  const message = document.querySelector("#message").value.trim();
+
+  if (!toName || !toEmail || !message) {
+    setStatus("Please fill in Name, Email, and Message.", "error");
+    return;
+  }
+
+  // ===== OPTIONAL honeypot (nếu bạn thêm input hidden id="company") =====
+  const honey = document.querySelector("#company");
+  if (honey && honey.value.trim()) {
+    // bot filled hidden field -> silently accept
+    setStatus("✅ Message sent successfully!", "success");
+    return;
+  }
+
+  // ===== UI loading =====
+  if (sendButton) {
+    sendButton.disabled = true;
+    sendButton.classList.add("is-loading");
+  }
+  setStatus("Sending...", "");
+
+  const params = {
+    toName,
+    toEmail,
+    phone,
+    message,
+    subject: "We received your message ✅",
+  };
+
+  const serviceID = "service_aubetcr";
+  const templateAutoReply = "template_287p8yr"; // gửi cho user (ToEmail={{toEmail}})
+  const templateNotifyOwner = "template_vm5242a"; // gửi cho bạn (ToEmail fixed)
+
+  try {
+    await Promise.all([
+      emailjs.send(serviceID, templateAutoReply, params),
+      emailjs.send(serviceID, templateNotifyOwner, params),
+    ]);
+
+    // ===== set cooldown timestamp =====
+    sendButton?.classList.remove("is-loading");
+    localStorage.setItem(LAST_SENT_KEY, String(Date.now()));
+    applyCooldownOnLoad(); // bật countdown 30s ngay sau khi gửi thành công
+
+    setStatus(
+      "✅ Message sent successfully! I will get back to you soon.",
+      "success"
+    );
+
+    // reset form
+    document.querySelector("#toName").value = "";
+    document.querySelector("#toEmail").value = "";
+    document.querySelector("#phone").value = "";
+    document.querySelector("#message").value = "";
+  } catch (err) {
+    console.error(err);
+
+    sendButton?.classList.remove("is-loading");
+
+    // set cooldown để chặn spam click kể cả khi fail
+    localStorage.setItem(LAST_SENT_KEY, String(Date.now()));
+    applyCooldownOnLoad();
+
+    setStatus("❌ Failed to send. Please try again later.", "error");
+  } finally {
+    sendButton?.classList.remove("is-loading");
+  }
+}
 
 // ============================
 // Project Details (Static Data)
@@ -133,7 +281,8 @@ const PROJECTS = {
       { label: "Database", value: "SQL Server" },
       {
         label: "Deploy & Tools",
-        value: "Docker, Docker Compose, Postman, GitHub, Visual Studio, VS Code",
+        value:
+          "Docker, Docker Compose, Postman, GitHub, Visual Studio, VS Code",
       },
       {
         label: "Architecture",

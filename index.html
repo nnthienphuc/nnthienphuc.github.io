@@ -328,9 +328,17 @@
             rows="10"
             placeholder="Your Message"
           ></textarea>
-          <button type="button" onclick="sendMail();" class="btn">
+          <button
+            type="button"
+            onclick="sendMail();"
+            class="btn"
+            id="sendBtn"
+            data-original-text="Send Message"
+          >
             Send Message
           </button>
+
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
         </div>
       </section>
       <!-- </form> -->
