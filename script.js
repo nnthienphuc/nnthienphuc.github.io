@@ -183,7 +183,7 @@ async function sendMail() {
     toEmail,
     phone,
     message,
-    subject: "We received your message ✅",
+    subject: "We received your message via Portfolio Website",
   };
 
   const serviceID = "service_aubetcr";
