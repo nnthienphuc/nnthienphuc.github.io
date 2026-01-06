@@ -232,7 +232,7 @@ async function sendMail() {
 const PROJECTS = {
   "smart-library-system": {
     title: "Smart Library System (AI-powered)",
-    youtubeEmbedUrl: "https://www.youtube.com/embed/VIDEO_ID",
+    youtubeEmbedUrl: "https://www.youtube.com/embed/uUUsqjE4M7U",
     githubUrl: "https://github.com/nnthienphuc/Smart_Library_System",
     description:
       "An intelligent library management system designed to digitalize and automate core library operations while enhancing user experience through an AI-powered recommendation agent. The system manages books, authors, publishers, users, staff, memberships, and borrowing/return workflows via a role-based platform. An AI Agent is integrated using n8n to analyze uploaded documents (PDF/text), generate semantic embeddings, and answer user questions or recommend books based on natural language queries. The solution supports both librarians and readers with real-time search, tracking, statistics, and personalized assistance, replacing traditional manual processes with a scalable, modern, and intelligent system.",
@@ -268,7 +268,7 @@ const PROJECTS = {
     title: "Personal Portfolio Tracker",
     githubUrl:
       "https://github.com/nnthienphuc/Personal-Portfolio-Tracker-Website",
-    youtubeEmbedUrl: "https://www.youtube.com/embed/VIDEO_ID",
+    youtubeEmbedUrl: "https://www.youtube.com/embed/iNnryGC5FXk",
     description:
       "A full-stack personal investment tracking system built to manage portfolios, accounts, and transactions with transparent and accurate financial calculations. The application supports multiple asset types including stocks, ETFs, funds, bonds, and crypto, while enforcing strict per-user data isolation. All investment logic such as average cost, realized and unrealized PnL is handled in the backend and follows Vietnamese broker standards, ensuring reliability and consistency for long-term portfolio analysis.",
     tech: [
@@ -293,7 +293,7 @@ const PROJECTS = {
 
   "supply-distributed-db": {
     title: "Supply Management Project (Distributed database)",
-    youtubeEmbedUrl: "https://www.youtube.com/embed/VIDEO_ID",
+    youtubeEmbedUrl: "https://www.youtube.com/embed/QhWSuwePmQ8",
     description:
       "A desktop application designed to manage inventory import and export operations for a company with two branches, built on a distributed database architecture. The system handles employees, warehouses, materials, purchase orders, goods receipts, and delivery notes with full business validation. Data is horizontally fragmented across multiple servers, where each branch stores its own transactional documents while shared reference data (employees and warehouses) is centralized for cross-branch lookup. The application enforces role-based access control (Company, Branch, User), branch-level data isolation, and business constraints such as preventing stock-in without purchase orders and limiting quantities based on ordered amounts. All core operations and reports are implemented using stored procedures, providing secure, consistent, and scalable data processing.",
     githubUrl:
