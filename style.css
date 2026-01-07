@@ -989,3 +989,15 @@ section {
   color: #ff6b6b;
 }
 
+.video-note {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 0.25rem;
+}
+
+.video-loading {
+  text-align: center;
+  padding: 2rem;
+  color: #ccc;
+  font-style: italic;
+}
