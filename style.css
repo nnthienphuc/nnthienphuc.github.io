@@ -1008,10 +1008,3 @@ section {
   width: 1px !important;
   opacity: 0 !important;
 }
-
-@media (min-width: 1400px) {
-  .home-img img {
-    width: 360px;
-    max-width: 360px;
-  }
-}
