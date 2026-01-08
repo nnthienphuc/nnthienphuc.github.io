@@ -12,6 +12,21 @@
     />
     <link rel="icon" type="image/png" href="images/developer.png" />
     <link rel="preload" as="image" href="images/so-mi.webp" type="image/webp" />
+
+    <meta
+      name="description"
+      content="Nguyen Ngoc Thien Phuc - Back-end Developer (ASP.NET Core). I build scalable REST APIs, database-driven systems, and real-world projects including Smart Library System (AI) and Personal Portfolio Tracker."
+    />
+    <meta
+      property="og:title"
+      content="Nguyen Ngoc Thien Phuc - Back-end Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="ASP.NET Core | REST APIs | SQL Server | Docker | Real-world projects & demos."
+    />
+    <meta property="og:image" content="images/so-mi.webp" />
+    <meta property="og:type" content="website" />
   </head>
   <body>
     <header class="header">
@@ -36,29 +51,40 @@
         <h1>Hi, It's <span>Thien Phuc</span></h1>
         <h2 class="text-animation">I'm a <span></span></h2>
         <p>
-          Welcome to my portfolio! As a passionate back-end developer, I
-          specialize in building scalable and efficient systems. Proficient in
-          C#, ASP.NET, Java and Spring Boot, I focus on crafting seamless APIs
-          and optimizing system performance to meet user needs. With a
-          problem-solving mindset and a commitment to continuous learning, I
-          thrive in dynamic environments and enjoy collaborating on impactful
-          projects. Let’s connect and create something amazing together!
+          I’m a back-end developer focused on building scalable REST APIs and
+          reliable database-driven systems using <strong>C#</strong> and
+          <strong>ASP.NET Core</strong>. I’ve built real-world projects like an
+          AI-powered Smart Library System and a Personal Portfolio Tracker with
+          backend-driven calculations and JWT-based security. I enjoy clean
+          architecture, performance tuning, and continuous learning.
         </p>
 
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/nnthienphuc/" target="_blank"
+          <a
+            href="https://www.linkedin.com/in/nnthienphuc/"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="bx bxl-linkedin"></i
           ></a>
-          <a href="https://github.com/nnthienphuc" target="_blank"
+          <a
+            href="https://github.com/nnthienphuc"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="bx bxl-github"></i
           ></a>
-          <a href="https://www.facebook.com/nnthienphuc" target="_blank"
+          <a
+            href="https://www.facebook.com/nnthienphuc"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="bx bxl-facebook-circle"></i
           ></a>
-          <a href="https://www.instagram.com/nnthienphuc/" target="_blank"
+          <a
+            href="https://www.instagram.com/nnthienphuc/"
+            target="_blank"
+            rel="noopener noreferrer"
             ><i class="bx bxl-instagram"></i
           ></a>
-          <a href="mailto:nnthienphuc@gmail.com" target="_blank"
+          <a href="mailto:nnthienphuc@gmail.com"
             ><i class="bx bxl-gmail"></i
           ></a>
         </div>
@@ -70,7 +96,11 @@
       </div>
 
       <div class="home-img">
-        <img src="images/so-mi.webp" alt="" style="width: 100%; height: auto" />
+        <img
+          src="images/so-mi.webp"
+          alt="Portrait of Thien Phuc"
+          style="width: 100%; height: auto"
+        />
       </div>
     </section>
 
@@ -311,12 +341,23 @@
       </h1>
 
       <!-- <form action = ""> -->
-      <section class="form-group">
+      <div class="form-group">
         <div class="input-group">
           <div class="input-box">
             <input type="text" id="toName" placeholder="Full name" />
             <input type="email" id="toEmail" placeholder="Email" />
-            <input type="number" id="phone" placeholder="Phone Number" />
+            <input type="tel" id="phone" placeholder="Phone Number" />
+
+            <!-- honeypot anti-spam -->
+            <input
+              type="text"
+              id="company"
+              name="company"
+              autocomplete="off"
+              tabindex="-1"
+              aria-hidden="true"
+              class="honeypot"
+            />
           </div>
         </div>
 
@@ -340,27 +381,37 @@
 
           <p id="formStatus" class="form-status" aria-live="polite"></p>
         </div>
-      </section>
+      </div>
       <!-- </form> -->
     </section>
 
     <footer class="footer">
       <div class="social">
-        <a href="https://www.linkedin.com/in/nnthienphuc/" target="_blank"
+        <a
+          href="https://www.linkedin.com/in/nnthienphuc/"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bx bxl-linkedin"></i
         ></a>
-        <a href="https://github.com/nnthienphuc" target="_blank"
+        <a
+          href="https://github.com/nnthienphuc"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bx bxl-github"></i
         ></a>
-        <a href="https://www.facebook.com/nnthienphuc" target="_blank"
+        <a
+          href="https://www.facebook.com/nnthienphuc"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bx bxl-facebook-circle"></i
         ></a>
-        <a href="https://www.instagram.com/nnthienphuc/" target="_blank"
+        <a
+          href="https://www.instagram.com/nnthienphuc/"
+          target="_blank"
+          rel="noopener noreferrer"
           ><i class="bx bxl-instagram"></i
         ></a>
-        <a href="mailto:nnthienphuc@gmail.com" target="_blank"
-          ><i class="bx bxl-gmail"></i
-        ></a>
+        <a href="mailto:nnthienphuc@gmail.com"><i class="bx bxl-gmail"></i></a>
       </div>
 
       <ul class="list">
@@ -381,7 +432,8 @@
         </li>
       </ul>
       <p class="copyright">
-        &copy 2024 Nguyen Ngoc Thien Phuc. All Rights Reserved
+        &copy; <span id="year"></span> Nguyen Ngoc Thien Phuc. All Rights
+        Reserved
       </p>
     </footer>
 

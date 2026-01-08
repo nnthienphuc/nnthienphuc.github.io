@@ -1,36 +1,62 @@
-let menuIcon = document.querySelector("#menu-icon");
-let navbar = document.querySelector(".navbar");
-let sections = document.querySelectorAll("section");
-let navLinks = document.querySelectorAll("header nav a");
-let cooldownTimer = null;
+// ============================
+// Navbar + Active Section
+// ============================
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll("header nav a");
 
-window.onscroll = () => {
+function updateActiveNav() {
+  const top = window.scrollY;
+
   sections.forEach((sec) => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute("id");
+    const id = sec.id;
+    if (!id) return;
+
+    const offset = sec.offsetTop - 150;
+    const height = sec.offsetHeight;
 
     if (top >= offset && top < offset + height) {
-      navLinks.forEach((links) => {
-        links.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
-      });
+      navLinks.forEach((link) => link.classList.remove("active"));
+      document
+        .querySelector(`header nav a[href="#${id}"]`)
+        ?.classList.add("active");
     }
   });
-};
+}
 
-menuIcon.onclick = () => {
+// ✅ Throttle scroll bằng requestAnimationFrame (mượt nhất cho mobile)
+let rafPending = false;
+function onScrollThrottled() {
+  if (rafPending) return;
+  rafPending = true;
+
+  requestAnimationFrame(() => {
+    updateActiveNav();
+    rafPending = false;
+  });
+}
+
+window.addEventListener("scroll", onScrollThrottled, { passive: true });
+
+menuIcon?.addEventListener("click", () => {
   menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-};
+  navbar?.classList.toggle("active");
+});
 
-// init EmailJS 1 lần thôi
-emailjs.init("at_MwKRnpK0Owe9uR");
+// Click nav -> close menu on mobile
+navLinks.forEach((a) => {
+  a.addEventListener("click", () => {
+    navbar?.classList.remove("active");
+    menuIcon?.classList.remove("bx-x");
+  });
+});
 
-// ===== anti-spam cooldown config =====
+// ============================
+// EmailJS + Anti-spam Cooldown
+// ============================
+let cooldownTimer = null;
+
 const COOLDOWN_MS = 30000; // 30s
 const LAST_SENT_KEY = "contact_last_sent_at";
 
@@ -41,7 +67,6 @@ function getRemainingCooldownMs() {
   return remain > 0 ? remain : 0;
 }
 
-// ===== show cooldown immediately on page load =====
 function applyCooldownOnLoad() {
   const sendButton =
     document.getElementById("sendBtn") ||
@@ -51,38 +76,34 @@ function applyCooldownOnLoad() {
 
   const oldText = sendButton.dataset.originalText || "Send Message";
 
+  const setStatus = (msg, type) => {
+    if (!statusEl) return;
+    statusEl.textContent = msg || "";
+    statusEl.className = `form-status ${type || ""}`.trim();
+  };
+
   const tick = () => {
     const remain = getRemainingCooldownMs();
 
     if (remain <= 0) {
       sendButton.disabled = false;
       sendButton.textContent = oldText;
-
-      if (statusEl) {
-        statusEl.textContent = "";
-        statusEl.className = "form-status";
-      }
+      setStatus("", "");
       return false;
     }
 
     const sec = Math.ceil(remain / 1000);
     sendButton.disabled = true;
     sendButton.textContent = `Wait ${sec}s`;
-
-    if (statusEl) {
-      statusEl.textContent = `Please wait ${sec}s before sending again.`;
-      statusEl.className = "form-status error";
-    }
+    setStatus(`Please wait ${sec}s before sending again.`, "error");
     return true;
   };
 
-  // clear timer cũ để tránh nhiều interval
   if (cooldownTimer) {
     clearInterval(cooldownTimer);
     cooldownTimer = null;
   }
 
-  // chạy ngay + chạy mỗi giây nếu còn cooldown
   if (tick()) {
     cooldownTimer = setInterval(() => {
       if (!tick()) {
@@ -92,42 +113,6 @@ function applyCooldownOnLoad() {
     }, 1000);
   }
 }
-
-document.addEventListener("DOMContentLoaded", applyCooldownOnLoad);
-
-// function startCooldownUI(btn, statusEl, oldText, cooldownMs) {
-//   const start = Date.now();
-//   btn.disabled = true;
-//   btn.classList.remove("is-loading");
-//   btn.textContent = "Try again soon";
-
-//   if (statusEl) {
-//     statusEl.textContent = "❌ Failed to send. Retry available soon.";
-//     statusEl.className = "form-status error";
-//   }
-
-//   const timer = setInterval(() => {
-//     const elapsed = Date.now() - start;
-//     const remain = cooldownMs - elapsed;
-
-//     if (remain <= 0) {
-//       clearInterval(timer);
-//       btn.disabled = false;
-//       btn.textContent = oldText;
-//       if (statusEl) {
-//         statusEl.textContent = "You can try sending again now.";
-//         statusEl.className = "form-status";
-//       }
-//       return;
-//     }
-
-//     const sec = Math.ceil(remain / 1000);
-//     if (statusEl) {
-//       statusEl.textContent = `❌ Failed to send. Retry available in ${sec}s.`;
-//       statusEl.className = "form-status error";
-//     }
-//   }, 1000);
-// }
 
 async function sendMail() {
   const sendButton =
@@ -144,7 +129,7 @@ async function sendMail() {
     statusEl.className = `form-status ${type || ""}`.trim();
   };
 
-  // ===== cooldown check (FREE - localStorage) =====
+  // ===== cooldown check =====
   const remain = getRemainingCooldownMs();
   if (remain > 0) {
     const sec = Math.ceil(remain / 1000);
@@ -153,21 +138,26 @@ async function sendMail() {
   }
 
   // ===== validate =====
-  const toName = document.querySelector("#toName").value.trim();
-  const toEmail = document.querySelector("#toEmail").value.trim();
-  const phone = document.querySelector("#phone").value.trim();
-  const message = document.querySelector("#message").value.trim();
+  const toName = document.querySelector("#toName")?.value.trim() || "";
+  const toEmail = document.querySelector("#toEmail")?.value.trim() || "";
+  const phone = document.querySelector("#phone")?.value.trim() || "";
+  const message = document.querySelector("#message")?.value.trim() || "";
 
   if (!toName || !toEmail || !message) {
     setStatus("Please fill in Name, Email, and Message.", "error");
     return;
   }
 
-  // ===== OPTIONAL honeypot (nếu bạn thêm input hidden id="company") =====
+  // honeypot
   const honey = document.querySelector("#company");
   if (honey && honey.value.trim()) {
-    // bot filled hidden field -> silently accept
     setStatus("✅ Message sent successfully!", "success");
+    return;
+  }
+
+  // EmailJS not loaded -> prevent breaking
+  if (!window.emailjs) {
+    setStatus("❌ Email service unavailable. Please try again later.", "error");
     return;
   }
 
@@ -175,6 +165,7 @@ async function sendMail() {
   if (sendButton) {
     sendButton.disabled = true;
     sendButton.classList.add("is-loading");
+    sendButton.textContent = oldText;
   }
   setStatus("Sending...", "");
 
@@ -187,8 +178,8 @@ async function sendMail() {
   };
 
   const serviceID = "service_aubetcr";
-  const templateAutoReply = "template_287p8yr"; // gửi cho user (ToEmail={{toEmail}})
-  const templateNotifyOwner = "template_vm5242a"; // gửi cho bạn (ToEmail fixed)
+  const templateAutoReply = "template_287p8yr";
+  const templateNotifyOwner = "template_vm5242a";
 
   try {
     await Promise.all([
@@ -196,10 +187,8 @@ async function sendMail() {
       emailjs.send(serviceID, templateNotifyOwner, params),
     ]);
 
-    // ===== set cooldown timestamp =====
-    sendButton?.classList.remove("is-loading");
     localStorage.setItem(LAST_SENT_KEY, String(Date.now()));
-    applyCooldownOnLoad(); // bật countdown 30s ngay sau khi gửi thành công
+    applyCooldownOnLoad();
 
     setStatus(
       "✅ Message sent successfully! I will get back to you soon.",
@@ -207,16 +196,18 @@ async function sendMail() {
     );
 
     // reset form
-    document.querySelector("#toName").value = "";
-    document.querySelector("#toEmail").value = "";
-    document.querySelector("#phone").value = "";
-    document.querySelector("#message").value = "";
+    const nameEl = document.querySelector("#toName");
+    const emailEl = document.querySelector("#toEmail");
+    const phoneEl = document.querySelector("#phone");
+    const msgEl = document.querySelector("#message");
+
+    if (nameEl) nameEl.value = "";
+    if (emailEl) emailEl.value = "";
+    if (phoneEl) phoneEl.value = "";
+    if (msgEl) msgEl.value = "";
   } catch (err) {
     console.error(err);
 
-    sendButton?.classList.remove("is-loading");
-
-    // set cooldown để chặn spam click kể cả khi fail
     localStorage.setItem(LAST_SENT_KEY, String(Date.now()));
     applyCooldownOnLoad();
 
@@ -243,14 +234,8 @@ const PROJECTS = {
         value:
           "ASP.NET Core RESTful API, Repository Pattern, EF Core, JWT Authentication",
       },
-      {
-        label: "Frontend (Admin)",
-        value: "ReactJS (Admin Dashboard for Librarians)",
-      },
-      {
-        label: "Mobile App",
-        value: "React Native (Reader-facing application)",
-      },
+      { label: "Frontend (Admin)", value: "ReactJS (Admin Dashboard for Librarians)" },
+      { label: "Mobile App", value: "React Native (Reader-facing application)" },
       { label: "Database", value: "PostgreSQL" },
       {
         label: "AI Agent",
@@ -259,16 +244,14 @@ const PROJECTS = {
       },
       {
         label: "Deploy & Tools",
-        value:
-          "Docker, Postman, GitHub, Visual Studio, VS Code, Android Studio",
+        value: "Docker, Postman, GitHub, Visual Studio, VS Code, Android Studio",
       },
     ],
   },
 
   "personal-portfolio-tracker": {
     title: "Personal Portfolio Tracker",
-    githubUrl:
-      "https://github.com/nnthienphuc/Personal-Portfolio-Tracker-Website",
+    githubUrl: "https://github.com/nnthienphuc/Personal-Portfolio-Tracker-Website",
     drivePreviewUrl:
       "https://drive.google.com/file/d/1aZ1nwTcVQXKgQFtaw2OTGgAawxhIfH-d/preview",
     description:
@@ -276,20 +259,12 @@ const PROJECTS = {
     tech: [
       {
         label: "Backend",
-        value:
-          "ASP.NET Core Web API, EF Core, Repository Pattern, JWT Authentication",
+        value: "ASP.NET Core Web API, EF Core, Repository Pattern, JWT Authentication",
       },
       { label: "Frontend", value: "React (Vite), TailwindCSS, Axios" },
       { label: "Database", value: "SQL Server" },
-      {
-        label: "Deploy & Tools",
-        value:
-          "Docker, Docker Compose, Postman, GitHub, Visual Studio, VS Code",
-      },
-      {
-        label: "Architecture",
-        value: "JWT-secured Client–Server, backend-driven calculations",
-      },
+      { label: "Deploy & Tools", value: "Docker, Docker Compose, Postman, GitHub, Visual Studio, VS Code" },
+      { label: "Architecture", value: "JWT-secured Client–Server, backend-driven calculations" },
     ],
   },
 
@@ -305,10 +280,7 @@ const PROJECTS = {
       { label: "Desktop", value: "C# .NET WinForms/WinApp" },
       { label: "UI", value: "DevExpress" },
       { label: "Database", value: "SQL Server (multi-server)" },
-      {
-        label: "Deploy & Tools",
-        value: "GitHub, Visual Studio",
-      },
+      { label: "Deploy & Tools", value: "GitHub, Visual Studio" },
     ],
   },
 };
@@ -324,35 +296,37 @@ const modalGithub = document.getElementById("modalGithub");
 
 const closeBtn1 = document.getElementById("modalCloseBtn");
 const closeBtn2 = document.getElementById("modalCloseBtn2");
-
 const modalFrame = document.getElementById("modalFrame");
+const loading = document.getElementById("videoLoading");
 
 function openProjectModal(projectId) {
   const data = PROJECTS[projectId];
-  if (!data) return;
+  if (!data || !modalOverlay) return;
 
   modalTitle.textContent = data.title || "Project";
   modalDesc.textContent = data.description || "";
-  modalGithub.href = data.githubUrl || "#";
+  if (modalGithub) modalGithub.href = data.githubUrl || "#";
 
-  const loading = document.getElementById("videoLoading");
   if (loading) loading.style.display = "block";
 
-  modalFrame.onload = () => {
+  if (modalFrame) {
+    modalFrame.onload = () => {
+      if (loading) loading.style.display = "none";
+    };
+    modalFrame.src = data.drivePreviewUrl || "";
+  } else {
     if (loading) loading.style.display = "none";
-  };
+  }
 
-  modalFrame.src = data.drivePreviewUrl || "";
-
-  if (!data.drivePreviewUrl && loading) loading.style.display = "none";
-
-  modalTech.innerHTML = "";
-  (data.tech || []).forEach((t) => {
-    const div = document.createElement("div");
-    div.className = "tech-item";
-    div.innerHTML = `<strong>${t.label}</strong><span>${t.value}</span>`;
-    modalTech.appendChild(div);
-  });
+  if (modalTech) {
+    modalTech.innerHTML = "";
+    (data.tech || []).forEach((t) => {
+      const div = document.createElement("div");
+      div.className = "tech-item";
+      div.innerHTML = `<strong>${t.label}</strong><span>${t.value}</span>`;
+      modalTech.appendChild(div);
+    });
+  }
 
   modalOverlay.classList.add("show");
   modalOverlay.setAttribute("aria-hidden", "false");
@@ -360,19 +334,20 @@ function openProjectModal(projectId) {
 }
 
 function closeProjectModal() {
+  if (!modalOverlay) return;
+
   modalOverlay.classList.remove("show");
   modalOverlay.setAttribute("aria-hidden", "true");
 
-  modalFrame.onload = null;
-  modalFrame.src = "";
+  if (modalFrame) {
+    modalFrame.onload = null;
+    modalFrame.src = "";
+  }
 
-  const loading = document.getElementById("videoLoading");
   if (loading) loading.style.display = "block";
-
   document.body.style.overflow = "";
 }
 
-// bind open buttons
 document.querySelectorAll(".project-detail-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     const id = btn.getAttribute("data-project-id");
@@ -380,18 +355,33 @@ document.querySelectorAll(".project-detail-btn").forEach((btn) => {
   });
 });
 
-// close events
 closeBtn1?.addEventListener("click", closeProjectModal);
 closeBtn2?.addEventListener("click", closeProjectModal);
 
-// click outside modal closes
-modalOverlay.addEventListener("click", (e) => {
+modalOverlay?.addEventListener("click", (e) => {
   if (e.target === modalOverlay) closeProjectModal();
 });
 
-// ESC closes
 window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && modalOverlay.classList.contains("show")) {
+  if (e.key === "Escape" && modalOverlay?.classList.contains("show")) {
     closeProjectModal();
   }
+});
+
+// ============================
+// On Load
+// ============================
+document.addEventListener("DOMContentLoaded", () => {
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // guard EmailJS init
+  if (window.emailjs) {
+    emailjs.init("at_MwKRnpK0Owe9uR");
+  } else {
+    console.warn("EmailJS not loaded");
+  }
+
+  applyCooldownOnLoad();
+  updateActiveNav(); // set active nav immediately
 });
