@@ -189,20 +189,33 @@ section {
     content: "Back-end Developer";
   }
 }
+.actions-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+}
 
 .social-icons a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4.2rem; 
+  height: 4.2rem;
   background: transparent;
   border: 2px solid var(--main-color);
-  font-size: 2.4rem;
+  font-size: 2.2rem; 
   border-radius: 50%;
   color: var(--main-color);
-  margin: 1rem 1.4rem 2rem 0;
   transition: 0.25s ease-in-out;
+  margin: 0;
 }
 
 .social-icons a:hover {
@@ -214,14 +227,12 @@ section {
 
 .btn {
   display: inline-block;
-  padding: 1.05rem 2.8rem;
+  padding: 1.15rem 3.2rem; 
   background: var(--main-color);
   box-shadow: 0 0 25px var(--main-color);
   border-radius: 4rem;
-  font-size: 1.55rem;
+  font-size: 1.6rem;
   color: #000;
-  border: 2px solid transparent;
-  letter-spacing: 0.08rem;
   font-weight: 650;
   transition: 0.25s ease-in-out;
   cursor: pointer;
@@ -234,7 +245,6 @@ section {
 
 .btn-group {
   display: flex;
-  align-items: center;
   gap: 1.4rem;
   flex-wrap: wrap;
 }
