@@ -192,7 +192,7 @@ async function sendMail() {
 
     setStatus(
       "✅ Message sent successfully! I will get back to you soon.",
-      "success"
+      "success",
     );
 
     // reset form
@@ -221,6 +221,40 @@ async function sendMail() {
 // Project Details (Static Data)
 // ============================
 const PROJECTS = {
+  "personal-portfolio-tracker": {
+    title: "Personal Portfolio Tracker V2 (Cloud-Native)",
+    liveUrl: "https://app.nnthienphuc.me",
+    githubUrl:
+      "https://github.com/nnthienphuc/Personal-Portfolio-Tracker-Website-V2",
+    drivePreviewUrl:
+      "https://drive.google.com/file/d/1aZ1nwTcVQXKgQFtaw2OTGgAawxhIfH-d/preview",
+    description:
+      "Version 2 of my Personal Portfolio Tracker is a fully distributed, cloud-deployed system. It handles complex financial calculations - such as realized/unrealized PnL and average cost-aligned with strict broker standards. The architecture features a decoupled frontend and backend, secure email activation and password reset flows via SendGrid, and backend background workers fetching live market prices. The infrastructure is entirely cloud-native: relational data and image assets reside on Azure, the REST API is hosted on Render, and the React frontend is delivered globally via Vercel. The entire ecosystem is secured, cached, and routed behind Cloudflare.",
+    tech: [
+      {
+        label: "Backend",
+        value:
+          "ASP.NET Core Web API, EF Core, Hosted Services (Background Workers)",
+      },
+      {
+        label: "Frontend",
+        value: "React (Vite), TailwindCSS, Axios",
+      },
+      {
+        label: "Database & Storage",
+        value: "Azure SQL Database, Azure Blob Storage",
+      },
+      {
+        label: "Auth & APIs",
+        value: "JWT, Google OAuth, SendGrid Email API",
+      },
+      {
+        label: "Infrastructure",
+        value: "Render (BE), Vercel (FE), Cloudflare (DNS/Security)",
+      },
+    ],
+  },
+
   "smart-library-system": {
     title: "Smart Library System (AI-powered)",
     drivePreviewUrl:
@@ -234,8 +268,14 @@ const PROJECTS = {
         value:
           "ASP.NET Core RESTful API, Repository Pattern, EF Core, JWT Authentication",
       },
-      { label: "Frontend (Admin)", value: "ReactJS (Admin Dashboard for Librarians)" },
-      { label: "Mobile App", value: "React Native (Reader-facing application)" },
+      {
+        label: "Frontend (Admin)",
+        value: "ReactJS (Admin Dashboard for Librarians)",
+      },
+      {
+        label: "Mobile App",
+        value: "React Native (Reader-facing application)",
+      },
       { label: "Database", value: "PostgreSQL" },
       {
         label: "AI Agent",
@@ -244,27 +284,9 @@ const PROJECTS = {
       },
       {
         label: "Deploy & Tools",
-        value: "Docker, Postman, GitHub, Visual Studio, VS Code, Android Studio",
+        value:
+          "Docker, Postman, GitHub, Visual Studio, VS Code, Android Studio",
       },
-    ],
-  },
-
-  "personal-portfolio-tracker": {
-    title: "Personal Portfolio Tracker",
-    githubUrl: "https://github.com/nnthienphuc/Personal-Portfolio-Tracker-Website",
-    drivePreviewUrl:
-      "https://drive.google.com/file/d/1aZ1nwTcVQXKgQFtaw2OTGgAawxhIfH-d/preview",
-    description:
-      "A full-stack personal investment tracking system built to manage portfolios, accounts, and transactions with transparent and accurate financial calculations. The application supports multiple asset types including stocks, ETFs, funds, bonds, and crypto, while enforcing strict per-user data isolation. All investment logic such as average cost, realized and unrealized PnL is handled in the backend and follows Vietnamese broker standards, ensuring reliability and consistency for long-term portfolio analysis.",
-    tech: [
-      {
-        label: "Backend",
-        value: "ASP.NET Core Web API, EF Core, Repository Pattern, JWT Authentication",
-      },
-      { label: "Frontend", value: "React (Vite), TailwindCSS, Axios" },
-      { label: "Database", value: "SQL Server" },
-      { label: "Deploy & Tools", value: "Docker, Docker Compose, Postman, GitHub, Visual Studio, VS Code" },
-      { label: "Architecture", value: "JWT-secured Client–Server, backend-driven calculations" },
     ],
   },
 
@@ -273,7 +295,7 @@ const PROJECTS = {
     drivePreviewUrl:
       "https://drive.google.com/file/d/1b33B0FycZAJi3h8wohtXuhV6aMFUJcjN/preview",
     description:
-      "A desktop application designed to manage inventory import and export operations for a company with two branches, built on a distributed database architecture. The system handles employees, warehouses, materials, purchase orders, goods receipts, and delivery notes with full business validation. Data is horizontally fragmented across multiple servers, where each branch stores its own transactional documents while shared reference data (employees and warehouses) is centralized for cross-branch lookup. The application enforces role-based access control (Company, Branch, User), branch-level data isolation, and business constraints such as preventing stock-in without purchase orders and limiting quantities based on ordered amounts. All core operations and reports are implemented using stored procedures, providing secure, consistent, and scalable data processing.",
+      "A comprehensive, cloud-native wealth management platform designed to monitor everything from cash balances and credit to Stocks and Crypto portfolios. \n\nKey features include:\n• Intuitive Dashboards: Near real-time snapshot of portfolio value, cash balance, and asset allocation.\n• Advanced Analytics: Strict financial calculations for realized/unrealized PnL aligned with Vietnamese broker standards.\n• Visual Analysis: Allows users to attach technical chart snapshots directly to transaction notes to track trading disciplines.\n• Secure Architecture: Decoupled frontend/backend with JWT authentication, SendGrid email workflows, and background price-fetching workers hosted across Vercel, Render, and Azure.",
     githubUrl:
       "https://github.com/nnthienphuc/PTIT-Co-So-Du-Lieu-Phan-Tan-De-Tai-Quan-Ly-Vat-Tu",
     tech: [
@@ -306,6 +328,15 @@ function openProjectModal(projectId) {
   modalTitle.textContent = data.title || "Project";
   modalDesc.textContent = data.description || "";
   if (modalGithub) modalGithub.href = data.githubUrl || "#";
+
+  if (modalLiveProject) {
+    if (data.liveUrl) {
+      modalLiveProject.href = data.liveUrl;
+      modalLiveProject.style.display = "inline-block";
+    } else {
+      modalLiveProject.style.display = "none";
+    }
+  }
 
   if (loading) loading.style.display = "block";
 

@@ -840,6 +840,7 @@ section {
   font-size: 1.6rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.9);
+  /* white-space: pre-wrap; */
 }
 
 .tech-grid {

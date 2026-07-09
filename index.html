@@ -41,10 +41,7 @@
         <a href="#home" class="active">Home</a>
         <a href="#education">Experience</a>
         <a href="#projects">Core Projects</a>
-        <a
-          href="https://app.nnthienphuc.me"
-          target="_blank"
-        >
+        <a href="https://app.nnthienphuc.me" target="_blank">
           Portfolio Tracker V2
         </a>
         <a href="#services">Services</a>
@@ -57,12 +54,14 @@
         <h1>Hi, It's <span>Thien Phuc</span></h1>
         <h2 class="text-animation">I'm a <span></span></h2>
         <p>
-          I’m a back-end developer focused on building scalable REST APIs and
-          reliable database-driven systems using <strong>C#</strong> and
-          <strong>ASP.NET Core</strong>. I’ve built real-world projects like an
-          AI-powered Smart Library System and a Personal Portfolio Tracker with
-          backend-driven calculations and JWT-based security. I enjoy clean
-          architecture, performance tuning, and continuous learning.
+          I’m a software developer focused on building scalable REST APIs and
+          distributed, cloud-native systems using <strong>C#</strong>,
+          <strong>ASP.NET Core</strong>, <strong>React</strong>, and
+          <strong>SQL Server</strong>. I’ve engineered real-world solutions like
+          an AI-powered Smart Library and a comprehensive Wealth Management
+          platform deployed across modern cloud infrastructures. I thrive on
+          clean architecture, performance tuning, and delivering secure,
+          high-performance applications.
         </p>
 
         <div class="social-icons">
@@ -200,7 +199,51 @@
         <h1 class="heading">Core Projects</h1>
 
         <div class="wrapper">
-          <!-- Smart Library System -->
+          <div class="project-item">
+            <img
+              src="images/personal-portfolio-tracker.jpg"
+              alt="Personal Portfolio Tracker V2"
+              loading="lazy"
+            />
+
+            <h2>Personal Portfolio Tracker V2 (Cloud-Native)</h2>
+
+            <div class="rating">
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star" id="star"></i>
+              <i class="bx bxs-star-half" id="star-half"></i>
+            </div>
+
+            <p>
+              A comprehensive, cloud-native wealth management platform designed
+              to monitor cash flow, bank accounts, credit, and investments
+              (Stocks & Crypto). The system handles complex financial
+              calculations - delivering near real-time PnL analytics aligned
+              with strict broker standards. Featuring a secure architecture,
+              intuitive asset allocation dashboards, and unique tools like
+              attaching technical charts to transaction notes, it provides a
+              seamless, mobile-first experience for absolute financial control.
+            </p>
+
+            <div
+              class="project-actions"
+              style="display: flex; gap: 10px; justify-content: center"
+            >
+              <button
+                type="button"
+                class="btn btn-outline project-detail-btn"
+                data-project-id="personal-portfolio-tracker"
+              >
+                View Details
+              </button>
+              <a href="https://app.nnthienphuc.me" target="_blank" class="btn">
+                Live Project 🚀
+              </a>
+            </div>
+          </div>
+
           <div class="project-item">
             <img
               src="images/smart-library-ai.jpg"
@@ -237,49 +280,6 @@
             </div>
           </div>
 
-          <div class="project-item">
-            <img
-              src="images/personal-portfolio-tracker.jpg"
-              alt="Personal Portfolio Tracker"
-              loading="lazy"
-            />
-
-            <h2>Personal Portfolio Tracker (Full-stack)</h2>
-
-            <div class="rating">
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-            </div>
-
-            <p>
-              A full-stack web application for personal investment management,
-              designed to track portfolios, transactions, and performance across
-              multiple asset types. The system applies transparent investment
-              calculations aligned with Vietnamese broker standards, providing
-              accurate realized and unrealized PnL analysis through a clean
-              dashboard and secure user-based architecture.
-            </p>
-
-            <div
-              class="project-actions"
-              style="display: flex; gap: 10px; justify-content: center"
-            >
-              <button
-                type="button"
-                class="btn btn-outline project-detail-btn"
-                data-project-id="personal-portfolio-tracker"
-              >
-                View Details
-              </button>
-              <a href="https://app.nnthienphuc.me" target="_blank" class="btn">
-                Live Project 🚀
-              </a>
-            </div>
-          </div>
-
-          <!-- Supply Distributed DB -->
           <div class="project-item">
             <img
               src="images/Supply-chain-ecosystem-infographic.jpg"
@@ -522,7 +522,26 @@
           >
             GitHub Source
           </a>
-          <button class="btn" type="button" id="modalCloseBtn2">Close</button>
+
+          <a
+            class="btn"
+            id="modalLiveProject"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            style="display: none"
+          >
+            Live Project 🚀
+          </a>
+
+          <button
+            class="btn btn-outline"
+            type="button"
+            id="modalCloseBtn2"
+            style="border-color: #555; color: #ccc"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
