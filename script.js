@@ -221,15 +221,15 @@ async function sendMail() {
 // Project Details (Static Data)
 // ============================
 const PROJECTS = {
-  "personal-portfolio-tracker": {
-    title: "Personal Portfolio Tracker V2 (Cloud-Native)",
+  "wealth-management-platform": {
+    title: "Wealth Management Platform (Cloud-Native)",
     liveUrl: "https://app.nnthienphuc.me",
     githubUrl:
-      "https://github.com/nnthienphuc/Personal-Portfolio-Tracker-Website-V2",
+      "https://github.com/nnthienphuc/Wealth_Management_Platform",
     drivePreviewUrl:
       "https://drive.google.com/file/d/1aZ1nwTcVQXKgQFtaw2OTGgAawxhIfH-d/preview",
     description:
-      "Version 2 of my Personal Portfolio Tracker is a fully distributed, cloud-deployed system. It handles complex financial calculations - such as realized/unrealized PnL and average cost-aligned with strict broker standards. The architecture features a decoupled frontend and backend, secure email activation and password reset flows via SendGrid, and backend background workers fetching live market prices. The infrastructure is entirely cloud-native: relational data and image assets reside on Azure, the REST API is hosted on Render, and the React frontend is delivered globally via Vercel. The entire ecosystem is secured, cached, and routed behind Cloudflare.",
+      "My Wealth Management Platform is a fully distributed, cloud-deployed system. It handles complex financial calculations - such as realized/unrealized PnL and average cost-aligned with strict broker standards. The architecture features a decoupled frontend and backend, secure email activation and password reset flows via SendGrid, and backend background workers fetching live market prices. The infrastructure is entirely cloud-native: relational data and image assets reside on Azure, the REST API is hosted on Render, and the React frontend is delivered globally via Vercel. The entire ecosystem is secured, cached, and routed behind Cloudflare.",
     tech: [
       {
         label: "Backend",
