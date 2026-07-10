@@ -315,6 +315,7 @@ const modalTitle = document.getElementById("modalTitle");
 const modalDesc = document.getElementById("modalDescription");
 const modalTech = document.getElementById("modalTech");
 const modalGithub = document.getElementById("modalGithub");
+const modalLiveProject = document.getElementById("modalLiveProject");
 
 const closeBtn1 = document.getElementById("modalCloseBtn");
 const closeBtn2 = document.getElementById("modalCloseBtn2");
