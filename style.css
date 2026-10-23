@@ -174,21 +174,10 @@ section {
 }
 
 .text-animation span::before {
-  content: "Back-end Developer";
+  content: "Full-Stack Developer";
   color: var(--main-color);
-  animation: words 7s infinite;
 }
 
-@keyframes words {
-  0%,
-  50% {
-    content: "Web Developer";
-  }
-  25%,
-  75% {
-    content: "Back-end Developer";
-  }
-}
 .actions-container {
   display: flex;
   flex-direction: row;

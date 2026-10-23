@@ -1,511 +1,422 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <title>Nguyen Ngoc Thien Phuc - Back-end Developer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="images/developer.png" />
-    <link rel="preload" as="image" href="images/so-mi.webp" type="image/webp" />
 
-    <meta
-      name="description"
-      content="Nguyen Ngoc Thien Phuc - Back-end Developer (ASP.NET Core). I build scalable REST APIs, database-driven systems, and real-world projects including Smart Library System (AI) and Wealth Management Platform."
-    />
-    <meta
-      property="og:title"
-      content="Nguyen Ngoc Thien Phuc - Back-end Developer Portfolio"
-    />
-    <meta
-      property="og:description"
-      content="ASP.NET Core | REST APIs | SQL Server | Docker | Real-world projects & demos."
-    />
-    <meta property="og:image" content="images/so-mi.webp" />
-    <meta property="og:type" content="website" />
-  </head>
-  <body>
-    <header class="header">
-      <a href="#" class="logo"
-        >Nguyen Ngoc
-        <span>Thien Phuc</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <title>Nguyen Ngoc Thien Phuc - Full-Stack Developer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/developer.png" />
+  <link rel="preload" as="image" href="images/so-mi.webp" type="image/webp" />
+
+  <meta name="description"
+    content="Nguyen Ngoc Thien Phuc - Full-Stack Developer. I build scalable REST APIs, database-driven systems, and real-world projects including Smart Library System (AI) and Wealth Management Platform." />
+  <meta property="og:title" content="Nguyen Ngoc Thien Phuc - Full-Stack Developer Portfolio" />
+  <meta property="og:description"
+    content="ASP.NET Core | REST APIs | SQL Server | Docker | Real-world projects & demos." />
+  <meta property="og:image" content="images/so-mi.webp" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">Nguyen Ngoc
+      <span>Thien Phuc</span>
+    </a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#education">Experience</a>
+      <a href="#projects">Core Projects</a>
+      <a href="https://app.nnthienphuc.me" target="_blank">
+        Wealth Management Platform
       </a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-      <i class="bx bx-menu" id="menu-icon"></i>
+  <section class="home" id="home">
+  <div class="home-content">
+    <h1>Hi, It's <span>Thien Phuc</span></h1>
+    <h2 class="text-animation">I'm a <span></span></h2>
 
-      <nav class="navbar">
-        <a href="#home" class="active">Home</a>
-        <a href="#education">Experience</a>
-        <a href="#projects">Core Projects</a>
-        <a href="https://app.nnthienphuc.me" target="_blank">
-          Wealth Management Platform
-        </a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <p>
+      I'm a Full-Stack Developer with 9 months of hands-on experience
+      developing and maintaining RESTful APIs using
+      <strong>ASP.NET Core</strong> at S3WORK, complemented by practical
+      front-end experience with <strong>React</strong> and
+      <strong>React Native</strong>. I focus on building scalable web APIs,
+      clean layered architecture, optimized SQL Server databases, and modern
+      web applications.
+    </p>
 
-    <section class="home" id="home">
-      <div class="home-content">
-        <h1>Hi, It's <span>Thien Phuc</span></h1>
-        <h2 class="text-animation">I'm a <span></span></h2>
-        <p>
-          I’m a software developer focused on building scalable REST APIs and
-          distributed, cloud-native systems using <strong>C#</strong>,
-          <strong>ASP.NET Core</strong>, <strong>React</strong>, and
-          <strong>SQL Server</strong>. I’ve engineered real-world solutions like
-          an AI-powered Smart Library and a comprehensive Wealth Management
-          platform deployed across modern cloud infrastructures. I thrive on
-          clean architecture, performance tuning, and delivering secure,
-          high-performance applications.
-        </p>
-
-        <div class="actions-container">
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/nnthienphuc/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-            <a href="https://github.com/nnthienphuc" target="_blank"><i class="bx bxl-github"></i></a>
-            <a href="mailto:nnthienphuc@gmail.com"><i class="bx bxl-gmail"></i></a>
-          </div>
-          
-          <div class="btn-group">
-            <a href="CV/NguyenNgocThienPhuc_BackendDeveloper_DotNET.pdf" class="btn" target="_blank">My Resume</a>
-          </div>
-        </div>
-
-        </div>
-      </div>
-
-      <div class="home-img">
-        <img
-          src="images/so-mi.webp"
-          alt="Portrait of Thien Phuc"
-          style="width: 100%; height: auto"
-        />
-      </div>
-    </section>
-
-    <section class="education" id="education">
-      <h1 class="heading">Experience</h1>
-      <div class="timeline-items">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2025</div>
-          <div class="timeline-content">
-            <h2>ASP.NET Back-end Intern at S3WORK</h2>
-            <p>
-              I interned at
-              <a
-                href="https://s3work.vn/"
-                target="_blank"
-                style="color: #00ffee"
-                >S3WORK TECH COMPANY LIMITED</a
-              >
-              as a Back-end Developer focusing on ASP.NET Core. Collaborating
-              closely with senior engineers to build scalable APIs and
-              enterprise-level backend features. Throughout the internship, I've
-              received strong feedback for writing clean, maintainable code and
-              quickly adapting to real-world development standards and
-              workflows.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2023</div>
-          <div class="timeline-content">
-            <h2>Coursera</h2>
-            <p>
-              Throughout my collegiate studies, I recognized the imperative to
-              expand my expertise to advance within the challenging realm of
-              programming. Consequently, I embarked on a journey of
-              self-education through the Coursera platform when I had no classes
-              at university.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2021</div>
-          <div class="timeline-content">
-            <h2>University</h2>
-            <p>
-              As an IT student at the Posts and Telecommunications Institute of
-              Technology (<a
-                href="https://ptithcm.edu.vn/"
-                target="_blank"
-                style="color: #00ffee"
-                >PTIT</a
-              >), my academic journey began with an introduction to programming,
-              mentored by esteemed industry professionals holding Master's and
-              Doctoral degrees. Their guidance extended beyond theoretical
-              concepts, encompassing hands-on experience through practical
-              project work.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2018</div>
-          <div class="timeline-content">
-            <h2>High School</h2>
-            <p>
-              Driven by a lifelong passion for math, my academic endeavors
-              brought me to enroll in a high school advanced math class. This
-              experience paved the way for my subsequent exploration of the
-              logical and systematic world of programming.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="projects" id="projects">
-      <div class="projects-box">
-        <h1 class="heading">Core Projects</h1>
-
-        <div class="wrapper">
-          <div class="project-item">
-            <img
-              src="images/wealth-management-platform.jpg"
-              alt="Wealth Management Platform"
-              loading="lazy"
-            />
-
-            <h2>Wealth Management Platform (Cloud-Native)</h2>
-
-            <div class="rating">
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star-half" id="star-half"></i>
-            </div>
-
-            <p>
-              A comprehensive, cloud-native wealth management platform designed
-              to monitor cash flow, bank accounts, credit, and investments
-              (Stocks & Crypto). The system handles complex financial
-              calculations - delivering near real-time PnL analytics aligned
-              with strict broker standards. Featuring a secure architecture,
-              intuitive asset allocation dashboards, and unique tools like
-              attaching technical charts to transaction notes, it provides a
-              seamless, mobile-first experience for absolute financial control.
-            </p>
-
-            <div
-              class="project-actions"
-              style="display: flex; gap: 10px; justify-content: center"
-            >
-              <button
-                type="button"
-                class="btn btn-outline project-detail-btn"
-                data-project-id="wealth-management-platform"
-              >
-                View Details
-              </button>
-              <a href="https://app.nnthienphuc.me" target="_blank" class="btn">
-                Live Project 🚀
-              </a>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <img
-              src="images/smart-library-ai.jpg"
-              alt="Smart Library System"
-              loading="lazy"
-            />
-            <h2>Smart Library System (AI-powered) 🤖</h2>
-
-            <div class="rating">
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star-half" id="star-half"></i>
-            </div>
-
-            <p>
-              An intelligent library management system that digitalizes book
-              borrowing and returning workflows while integrating an AI Agent
-              for book search, recommendations, and natural language Q&amp;A.
-              The platform supports both librarians and readers via web and
-              mobile applications, replacing traditional manual processes with a
-              modern, scalable solution.
-            </p>
-
-            <div class="project-actions">
-              <button
-                type="button"
-                class="btn btn-outline project-detail-btn"
-                data-project-id="smart-library-system"
-              >
-                View Demo & Details
-              </button>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <img
-              src="images/Supply-chain-ecosystem-infographic.jpg"
-              alt="Supply Management"
-              loading="lazy"
-            />
-            <h2>Supply Management Project (Distributed database)</h2>
-
-            <div class="rating">
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-              <i class="bx bxs-star" id="star"></i>
-            </div>
-
-            <p>
-              A desktop application for managing inventory import and export
-              operations in a multi-branch company. The system covers employees,
-              warehouses, materials, purchase orders, and sales workflows, built
-              on a distributed database architecture with data fragmentation
-              across multiple servers to ensure consistency, security, and
-              scalability.
-            </p>
-
-            <div class="project-actions">
-              <button
-                type="button"
-                class="btn btn-outline project-detail-btn"
-                data-project-id="supply-distributed-db"
-              >
-                View Demo & Details
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <h1 class="heading">Services</h1>
-      <div class="services-container">
-        <div class="service-box">
-          <div class="service-info">
-            <h2>Back-end Development</h2>
-            <p>
-              Back-end development involves working on server-side software,
-              focusing on everything that happens behind the scenes of a
-              website. Ensuring that a website functions properly by managing
-              databases, implementing back-end logic, creating and maintaining
-              application programming interfaces (APIs), designing the
-              architecture, and handling servers. Writing code that allows
-              browsers to communicate with databases, enabling the storage,
-              retrieval, and deletion of data.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-box">
-          <div class="service-info">
-            <h2>Desktop Application Development</h2>
-            <p>
-              Desktop application development involves creating software
-              applications that run on desktop computers. Desktop application
-              developers focus on the core functionality of the application,
-              ensuring it performs efficiently and reliably. Working with
-              application logic, data management, user interface design, and
-              system integration. Using programming languages and frameworks to
-              create applications that provide a seamless and intuitive user
-              experience while managing data storage, retrieval, and processing
-              on the local machine.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <h1 class="heading">
-        Contact <span>Me</span>
-        <br />
-      </h1>
-
-      <!-- <form action = ""> -->
-      <div class="form-group">
-        <div class="input-group">
-          <div class="input-box">
-            <input type="text" id="toName" placeholder="Full name" />
-            <input type="email" id="toEmail" placeholder="Email" />
-            <input type="tel" id="phone" placeholder="Phone Number" />
-
-            <!-- honeypot anti-spam -->
-            <input
-              type="text"
-              id="company"
-              name="company"
-              autocomplete="off"
-              tabindex="-1"
-              aria-hidden="true"
-              class="honeypot"
-            />
-          </div>
-        </div>
-
-        <div class="input-group-2">
-          <textarea
-            name=""
-            id="message"
-            cols="80"
-            rows="10"
-            placeholder="Your Message"
-          ></textarea>
-          <button
-            type="button"
-            onclick="sendMail()"
-            class="btn"
-            id="sendBtn"
-            data-original-text="Send Message"
-          >
-            Send Message
-          </button>
-
-          <p id="formStatus" class="form-status" aria-live="polite"></p>
-        </div>
-      </div>
-      <!-- </form> -->
-    </section>
-
-    <footer class="footer">
-      <div class="social">
+    <div class="actions-container">
+      <div class="social-icons">
         <a
           href="https://www.linkedin.com/in/nnthienphuc/"
           target="_blank"
           rel="noopener noreferrer"
-          ><i class="bx bxl-linkedin"></i
-        ></a>
+        >
+          <i class="bx bxl-linkedin"></i>
+        </a>
+
         <a
           href="https://github.com/nnthienphuc"
           target="_blank"
           rel="noopener noreferrer"
-          ><i class="bx bxl-github"></i
-        ></a>
-        <a href="mailto:nnthienphuc@gmail.com"><i class="bx bxl-gmail"></i></a>
+        >
+          <i class="bx bxl-github"></i>
+        </a>
+
+        <a href="mailto:nnthienphuc@gmail.com">
+          <i class="bx bxl-gmail"></i>
+        </a>
       </div>
 
-      <ul class="list">
-        <li>
-          <a href="#">FAQ</a>
-        </li>
-
-        <li>
-          <a href="#">About Me</a>
-        </li>
-
-        <li>
-          <a href="#services">Services</a>
-        </li>
-
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-      <p class="copyright">
-        &copy; <span id="year"></span> Nguyen Ngoc Thien Phuc. All Rights
-        Reserved
-      </p>
-    </footer>
-
-    <!-- ===== Project Details Modal ===== -->
-    <div class="modal-overlay" id="projectModal" aria-hidden="true">
-      <div
-        class="modal"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="modalTitle"
-      >
-        <button
-          class="modal-close"
-          type="button"
-          id="modalCloseBtn"
-          aria-label="Close"
+      <div class="btn-group">
+        <a
+          href="CV/NguyenNgocThienPhuc_FullStack_EN.pdf"
+          class="btn"
+          target="_blank"
+          rel="noopener"
         >
-          <i class="bx bx-x"></i>
-        </button>
+          My Resume
+        </a>
+      </div>
+    </div>
+  </div>
 
-        <h2 class="modal-title" id="modalTitle">Project Title</h2>
+  <div class="home-img">
+    <img
+      src="images/so-mi.webp"
+      alt="Portrait of Thien Phuc"
+      style="width: 100%; height: auto"
+    />
+  </div>
+</section>
 
-        <div class="modal-body">
-          <div class="modal-section">
-            <h3>Project Demo Video</h3>
-            <p class="video-note">
-              This is a demo walkthrough of the project. The video may take a
-              few seconds to load.
-            </p>
-          </div>
-          <div class="modal-video">
-            <div class="video-loading" id="videoLoading">
-              Loading demo video…
-            </div>
-
-            <iframe
-              id="modalFrame"
-              src=""
-              title="Project demo video"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-
-          <div class="modal-section">
-            <h3>Main Features</h3>
-            <p id="modalDescription"></p>
-          </div>
-
-          <div class="modal-section">
-            <h3>Tech Stack</h3>
-            <div class="tech-grid" id="modalTech"></div>
-          </div>
+  <section class="education" id="education">
+    <h1 class="heading">Experience</h1>
+    <div class="timeline-items">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Jan 2025 – Sep 2025</div>
+        <div class="timeline-content">
+          <h2>ASP.NET Back-end Intern at S3WORK</h2>
+          <p>
+            I interned at
+            <a href="https://s3work.vn/" target="_blank" style="color: #00ffee">S3WORK TECH COMPANY LIMITED</a>
+            as a Back-end Developer focusing on ASP.NET Core. Collaborating
+            closely with senior engineers to build scalable APIs and
+            enterprise-level backend features. Throughout the internship, I've
+            received strong feedback for writing clean, maintainable code and
+            quickly adapting to real-world development standards and
+            workflows.
+          </p>
         </div>
+      </div>
 
-        <div class="modal-footer">
-          <a
-            class="btn btn-outline"
-            id="modalGithub"
-            href="#"
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub Source
-          </a>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2023</div>
+        <div class="timeline-content">
+          <h2>Coursera</h2>
+          <p>
+            Throughout my collegiate studies, I recognized the imperative to
+            expand my expertise to advance within the challenging realm of
+            programming. Consequently, I embarked on a journey of
+            self-education through the Coursera platform when I had no classes
+            at university.
+          </p>
+        </div>
+      </div>
 
-          <a
-            class="btn"
-            id="modalLiveProject"
-            href="#"
-            target="_blank"
-            rel="noopener"
-            style="display: none"
-          >
-            Live Project 🚀
-          </a>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2021</div>
+        <div class="timeline-content">
+          <h2>University</h2>
+          <p>
+            As an IT student at the Posts and Telecommunications Institute of
+            Technology (<a href="https://ptithcm.edu.vn/" target="_blank" style="color: #00ffee">PTIT</a>), my academic
+            journey began with an introduction to programming,
+            mentored by esteemed industry professionals holding Master's and
+            Doctoral degrees. Their guidance extended beyond theoretical
+            concepts, encompassing hands-on experience through practical
+            project work.
+          </p>
+        </div>
+      </div>
 
-          <button
-            class="btn btn-outline"
-            type="button"
-            id="modalCloseBtn2"
-            style="border-color: #555; color: #ccc"
-          >
-            Close
-          </button>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2018</div>
+        <div class="timeline-content">
+          <h2>High School</h2>
+          <p>
+            Driven by a lifelong passion for math, my academic endeavors
+            brought me to enroll in a high school advanced math class. This
+            experience paved the way for my subsequent exploration of the
+            logical and systematic world of programming.
+          </p>
         </div>
       </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+  <section class="projects" id="projects">
+    <div class="projects-box">
+      <h1 class="heading">Core Projects</h1>
+
+      <div class="wrapper">
+        <div class="project-item">
+          <img src="images/wealth-management-platform.jpg" alt="Wealth Management Platform" loading="lazy" />
+
+          <h2>Wealth Management Platform (Cloud-Native)</h2>
+
+          <div class="rating">
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star-half" id="star-half"></i>
+          </div>
+
+          <p>
+            A comprehensive, cloud-native wealth management platform designed
+            to monitor cash flow, bank accounts, credit, and investments
+            (Stocks & Crypto). The system handles complex financial
+            calculations - delivering near real-time PnL analytics aligned
+            with strict broker standards. Featuring a secure architecture,
+            intuitive asset allocation dashboards, and unique tools like
+            attaching technical charts to transaction notes, it provides a
+            seamless, mobile-first experience for absolute financial control.
+          </p>
+
+          <div class="project-actions" style="display: flex; gap: 10px; justify-content: center">
+            <button type="button" class="btn btn-outline project-detail-btn"
+              data-project-id="wealth-management-platform">
+              View Details
+            </button>
+            <a href="https://app.nnthienphuc.me" target="_blank" class="btn">
+              Live Project 🚀
+            </a>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img src="images/smart-library-ai.jpg" alt="Smart Library System" loading="lazy" />
+          <h2>Smart Library System (AI-powered) 🤖</h2>
+
+          <div class="rating">
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star-half" id="star-half"></i>
+          </div>
+
+          <p>
+            An intelligent library management system that digitalizes book
+            borrowing and returning workflows while integrating an AI Agent
+            for book search, recommendations, and natural language Q&amp;A.
+            The platform supports both librarians and readers via web and
+            mobile applications, replacing traditional manual processes with a
+            modern, scalable solution.
+          </p>
+
+          <div class="project-actions">
+            <button type="button" class="btn btn-outline project-detail-btn" data-project-id="smart-library-system">
+              View Demo & Details
+            </button>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img src="images/Supply-chain-ecosystem-infographic.jpg" alt="Supply Management" loading="lazy" />
+          <h2>Supply Management Project (Distributed database)</h2>
+
+          <div class="rating">
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+            <i class="bx bxs-star" id="star"></i>
+          </div>
+
+          <p>
+            A desktop application for managing inventory import and export
+            operations in a multi-branch company. The system covers employees,
+            warehouses, materials, purchase orders, and sales workflows, built
+            on a distributed database architecture with data fragmentation
+            across multiple servers to ensure consistency, security, and
+            scalability.
+          </p>
+
+          <div class="project-actions">
+            <button type="button" class="btn btn-outline project-detail-btn" data-project-id="supply-distributed-db">
+              View Demo & Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+  <h1 class="heading">Services</h1>
+
+  <div class="services-container">
+    <div class="service-box">
+      <div class="service-info">
+        <h2>Full-Stack Web Development</h2>
+        <p>
+          Building end-to-end applications with C# and ASP.NET Core REST APIs,
+          responsive React web interfaces, and React Native mobile applications.
+          Experienced with SQL Server and PostgreSQL, JWT authentication,
+          Docker-based development, and cloud deployment using Azure, Render,
+          Vercel, and Cloudflare.
+        </p>
+      </div>
+    </div>
+
+    <div class="service-box">
+      <div class="service-info">
+        <h2>Desktop Application Development</h2>
+        <p>
+          Building desktop applications with C#/.NET and Java, focusing on
+          business logic, database integration, role-based access, and reliable
+          data processing. Experienced with SQL Server, MySQL, WinForms,
+          DevExpress, stored procedures, and distributed database systems for
+          multi-branch business applications.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="contact" id="contact">
+    <h1 class="heading">
+      Contact <span>Me</span>
+      <br />
+    </h1>
+
+    <!-- <form action = ""> -->
+    <div class="form-group">
+      <div class="input-group">
+        <div class="input-box">
+          <input type="text" id="toName" placeholder="Full name" />
+          <input type="email" id="toEmail" placeholder="Email" />
+          <input type="tel" id="phone" placeholder="Phone Number" />
+
+          <!-- honeypot anti-spam -->
+          <input type="text" id="company" name="company" autocomplete="off" tabindex="-1" aria-hidden="true"
+            class="honeypot" />
+        </div>
+      </div>
+
+      <div class="input-group-2">
+        <textarea name="" id="message" cols="80" rows="10" placeholder="Your Message"></textarea>
+        <button type="button" onclick="sendMail()" class="btn" id="sendBtn" data-original-text="Send Message">
+          Send Message
+        </button>
+
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </div>
+    </div>
+    <!-- </form> -->
+  </section>
+
+  <footer class="footer">
+    <div class="social">
+      <a href="https://www.linkedin.com/in/nnthienphuc/" target="_blank" rel="noopener noreferrer"><i
+          class="bx bxl-linkedin"></i></a>
+      <a href="https://github.com/nnthienphuc" target="_blank" rel="noopener noreferrer"><i
+          class="bx bxl-github"></i></a>
+      <a href="mailto:nnthienphuc@gmail.com"><i class="bx bxl-gmail"></i></a>
+    </div>
+
+    <ul class="list">
+      <li>
+        <a href="#">FAQ</a>
+      </li>
+
+      <li>
+        <a href="#">About Me</a>
+      </li>
+
+      <li>
+        <a href="#services">Services</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
+    <p class="copyright">
+      &copy; <span id="year"></span> Nguyen Ngoc Thien Phuc. All Rights
+      Reserved
+    </p>
+  </footer>
+
+  <!-- ===== Project Details Modal ===== -->
+  <div class="modal-overlay" id="projectModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" id="modalCloseBtn" aria-label="Close">
+        <i class="bx bx-x"></i>
+      </button>
+
+      <h2 class="modal-title" id="modalTitle">Project Title</h2>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h3>Project Demo Video</h3>
+          <p class="video-note">
+            This is a demo walkthrough of the project. The video may take a
+            few seconds to load.
+          </p>
+        </div>
+        <div class="modal-video">
+          <div class="video-loading" id="videoLoading">
+            Loading demo video…
+          </div>
+
+          <iframe id="modalFrame" src="" title="Project demo video" frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="modal-section">
+          <h3>Main Features</h3>
+          <p id="modalDescription"></p>
+        </div>
+
+        <div class="modal-section">
+          <h3>Tech Stack</h3>
+          <div class="tech-grid" id="modalTech"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a class="btn btn-outline" id="modalGithub" href="#" target="_blank" rel="noopener">
+          GitHub Source
+        </a>
+
+        <a class="btn" id="modalLiveProject" href="#" target="_blank" rel="noopener" style="display: none">
+          Live Project 🚀
+        </a>
+
+        <button class="btn btn-outline" type="button" id="modalCloseBtn2" style="border-color: #555; color: #ccc">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
