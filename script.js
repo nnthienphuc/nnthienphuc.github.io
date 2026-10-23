@@ -229,7 +229,7 @@ const PROJECTS = {
     drivePreviewUrl:
       "https://drive.google.com/file/d/1aZ1nwTcVQXKgQFtaw2OTGgAawxhIfH-d/preview",
     description:
-      "My Wealth Management Platform is a fully distributed, cloud-deployed system. It handles complex financial calculations - such as realized/unrealized PnL and average cost-aligned with strict broker standards. The architecture features a decoupled frontend and backend, secure email activation and password reset flows via SendGrid, and backend background workers fetching live market prices. The infrastructure is entirely cloud-native: relational data and image assets reside on Azure, the REST API is hosted on Render, and the React frontend is delivered globally via Vercel. The entire ecosystem is secured, cached, and routed behind Cloudflare.",
+      "My Wealth Management Platform is a cloud-deployed, decoupled full-stack system. It handles complex financial calculations - such as realized/unrealized PnL and average cost-aligned with strict broker standards. The architecture features a decoupled frontend and backend, secure email activation and password reset flows via SendGrid, and backend background workers fetching live market prices. The infrastructure is entirely cloud-native: relational data and image assets reside on Azure, the REST API is hosted on Render, and the React frontend is delivered globally via Vercel. The entire ecosystem is secured, cached, and routed behind Cloudflare.",
     tech: [
       {
         label: "Backend",
