@@ -269,8 +269,8 @@ const PROJECTS = {
           "ASP.NET Core RESTful API, Repository Pattern, EF Core, JWT Authentication",
       },
       {
-        label: "Frontend (Admin)",
-        value: "ReactJS (Admin Dashboard for Librarians)",
+        label: "Frontend (Web)",
+        value: "ReactJS (Staff/Admin & Reader-facing applications)",
       },
       {
         label: "Mobile App",
@@ -291,7 +291,7 @@ const PROJECTS = {
   },
 
   "supply-distributed-db": {
-    title: "Supply Management Project (Distributed database)",
+    title: "Supply Management System (Distributed Database)",
     drivePreviewUrl:
       "https://drive.google.com/file/d/1b33B0FycZAJi3h8wohtXuhV6aMFUJcjN/preview",
     description:
